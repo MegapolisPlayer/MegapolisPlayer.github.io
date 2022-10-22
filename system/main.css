@@ -1,6 +1,6 @@
 body {
 	font-family: Helvetica;
-	font-size: 25px;
+	font-size: 2vw;
 	background-color: #00b9ff;
 	color: #000000;
 	width: 100%;
@@ -9,11 +9,11 @@ body {
 }
 h {
 	font-weight: bold;
-	font-size: 50px;
+	font-size: 4vw;
 }
 h2 {
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 3vw;
 }
 
 /*Divs*/
@@ -56,7 +56,7 @@ h2 {
 
 #header {
 	font-weight: bold;
-	font-size: 50px;
+	font-size: 5vw;
 	background-color: #0019a7;
 	color: #ffffff;
 	width: 100%;
@@ -71,7 +71,7 @@ h2 {
 #sidebar {
 	background-color: #808080;
 	color: #ffffff;
-	width: 21%;
+	width: 20%;
 	height: 100%;
 	text-align: center;
 	padding-right: 10px;
@@ -83,7 +83,7 @@ h2 {
 #credits {
 	background-color: #000000;
 	color: #ffffff;
-	font-size: 17px;
+	font-size: 1.7vw;
 	width: 100%;
 	padding-top: 10px;
 	padding-bottom: 10px;
