@@ -1,0 +1,40 @@
+body {
+    font-family: Helvetica;
+    font-size: 25px;
+    color: #000000;
+}
+
+h {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/*Divs*/
+#header {
+    background-color: #0019a7;
+    color: #ffffff;
+	width: 100vw;
+}
+
+#sidebar {
+background-color: #686868;
+    width: 21%;
+    height: 100vw;
+	margin: auto;
+    padding: 10px;
+    border: 5px hidden;
+    position: fixed;
+	left: 0;
+	top: 0;
+	text-align: center;
+}
+
+#credits {
+	font-size: 17px;
+    width: 100vw;
+    height: 5%;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    bottom: 0;
+}
