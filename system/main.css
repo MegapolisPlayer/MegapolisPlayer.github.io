@@ -13,6 +13,29 @@ h {
 }
 
 /*Divs*/
+
+#blogpost {
+	width = clamp(250px, 400px, 550px);
+	height = clamp(125px, 200px, 275px);
+	margin-top: clamp(15px, 25px, 35px);
+	margin-bottom: clamp(15px, 25px, 35px);
+	border: 5px solid #ffffff;
+}
+
+#note {
+	width: 75%;
+	height: clamp(50px, 100px, 150px);
+	background-color: #0f9400;
+	color: #000000;
+}
+
+#warning {
+	width: 75%;
+	height: clamp(50px, 100px, 150px);
+	background-color: #e6a600;
+	color: #000000;
+}
+
 #header {
 	font-weight: bold;
 	font-size: 50px;
@@ -22,6 +45,7 @@ h {
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	postion: absolute;
 }
 
 #sidebar {
@@ -30,6 +54,8 @@ h {
 	width: 21%;
 	height: 100%;
 	text-align: center;
+	padding-right: 10px;
+	postion: absolute;
 }
 
 #credits {
@@ -37,5 +63,7 @@ h {
 	color: #ffffff;
 	font-size: 17px;
 	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	text-align: center;
 }
