@@ -21,7 +21,6 @@ h2 {
 	background-color: #808080;
 	width = 10%;
 	height = 5%;
-	margin-left: 5%;
 	border: 5px solid #ffffff;
 	padding: clamp(30px, 70px, 100px); /*for text*/
 	vertical-align: middle;
@@ -70,6 +69,7 @@ h2 {
 	height: 100%;
 	text-align: center;
 	padding-right: 10px;
+	margin-right: 10%;
 	postion: absolute;
 	top: 0;
 	left: 0;
