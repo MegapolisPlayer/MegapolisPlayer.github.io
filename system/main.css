@@ -71,7 +71,6 @@ button {
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	postion: absolute;
 	top: 0;
 	left: 0;
 }
@@ -86,7 +85,7 @@ button {
 	text-align: center;
 	border-right: 5px solid #ffffff;
 	padding-right: 10px;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
