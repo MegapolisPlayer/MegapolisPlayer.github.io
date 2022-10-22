@@ -1,3 +1,5 @@
+/*Tags*/
+
 body {
 	font-family: Helvetica;
 	font-size: 1.25vw;
@@ -17,13 +19,14 @@ h2 {
 }
 
 /*Divs*/
+
 .blogpost {
 	background-color: #808080;
 	width = 10%;
 	height = 5%;
 	border: 5px solid #ffffff;
 	padding: clamp(30px, 70px, 100px); /*for text*/
-	vertical-align: middle;
+	margin-left: 20%;
 }
 
 #note {
@@ -70,7 +73,7 @@ h2 {
 	text-align: center;
 	padding-right: 10px;
 	margin-right: 10%;
-	postion: absolute;
+	position: absolute;
 	top: 0;
 	left: 0;
 }
