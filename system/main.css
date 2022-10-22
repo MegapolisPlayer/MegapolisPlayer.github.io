@@ -18,7 +18,7 @@ h2 {
 
 /*Divs*/
 
-#blogpost {
+.blogpost {
 	background-color: #808080;
 	width = 20%;
 	height = 10%;
@@ -28,6 +28,11 @@ h2 {
 	border: 5px solid #ffffff;
 	padding: clamp(30px, 70px, 100px); /*for text*/
 	vertical-align: middle;
+}
+
+.blogtext {
+	margin: auto;
+	text-align: center;
 }
 
 #note {
