@@ -16,8 +16,8 @@ h {
 
 #blogpost {
 	background-color: #808080;
-	width = clamp(250px, 400px, 550px);
-	height = clamp(125px, 200px, 275px);
+	width = 35%;
+	height = 10%;
 	margin-left: clamp(100px, 200px, 300px);
 	margin-top: clamp(15px, 25px, 35px);
 	margin-bottom: clamp(15px, 25px, 35px);
