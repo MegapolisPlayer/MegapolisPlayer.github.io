@@ -1,6 +1,7 @@
 body {
     font-family: Helvetica;
     font-size: 25px;
+	background-color: #ffffff;
     color: #000000;
 }
 
@@ -11,6 +12,8 @@ h {
 
 /*Divs*/
 #header {
+    font-weight: bold;
+    font-size: 50px;
     background-color: #0019a7;
     color: #ffffff;
 	width: 100vw;
