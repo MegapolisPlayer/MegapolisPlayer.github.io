@@ -1,2 +1,2 @@
 # MegapolisPlayer.github.io
-website
+This is my personal website! Please, do NOT contribute to this repository.
