@@ -20,9 +20,9 @@ h2 {
 
 .blogpost {
 	background-color: #808080;
-	width = 20%;
-	height = 10%;
-	margin-left: clamp(100px, 200px, 300px);
+	width = 10%;
+	height = 5%;
+	margin-left: 5%;
 	margin-top: clamp(15px, 25px, 35px);
 	margin-bottom: clamp(15px, 25px, 35px);
 	border: 5px solid #ffffff;
