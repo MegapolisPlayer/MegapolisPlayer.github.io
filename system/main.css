@@ -27,6 +27,7 @@ h2 {
 	border: 5px solid #ffffff;
 	padding: clamp(30px, 70px, 100px); /*for text*/
 	margin-left: 20%;
+	margin-top: 5%;
 }
 
 #note {
