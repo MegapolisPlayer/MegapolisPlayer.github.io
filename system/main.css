@@ -9,15 +9,14 @@ body {
 }
 h {
 	font-weight: bold;
-	font-size: 1vw;
+	font-size: 2vw;
 }
 h2 {
 	font-weight: bold;
-	font-size: 2vw;
+	font-size: 1.5vw;
 }
 
 /*Divs*/
-
 .blogpost {
 	background-color: #808080;
 	width = 10%;
@@ -61,8 +60,8 @@ h2 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	postion: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 }
 
 #sidebar {
@@ -72,8 +71,8 @@ h2 {
 	text-align: center;
 	padding-right: 10px;
 	postion: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 }
 
 #credits {
@@ -83,6 +82,4 @@ h2 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	text-align: center;
-	position: fixed;
-	bottom: 0px;
 }
