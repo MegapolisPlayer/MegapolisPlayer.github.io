@@ -11,18 +11,23 @@ h {
 	font-weight: bold;
 	font-size: 50px;
 }
+h2 {
+	font-weight: bold;
+	font-size: 30px;
+}
 
 /*Divs*/
 
 #blogpost {
 	background-color: #808080;
-	width = 35%;
+	width = 20%;
 	height = 10%;
 	margin-left: clamp(100px, 200px, 300px);
 	margin-top: clamp(15px, 25px, 35px);
 	margin-bottom: clamp(15px, 25px, 35px);
 	border: 5px solid #ffffff;
 	padding: clamp(30px, 70px, 100px); /*for text*/
+	vertical-align: middle;
 }
 
 #note {
@@ -30,9 +35,10 @@ h {
 	height: clamp(50px, 100px, 150px);
 	background-color: #0f9400;
 	color: #000000;
-	border-left: 5px solid #096100;
+	border-left: 20px solid #096100;
 	padding-left: clamp(30px, 70px, 100px); 
 	margin-left: clamp(75px, 150px, 225px); 
+	vertical-align: middle;
 }
 
 #warning {
@@ -40,7 +46,7 @@ h {
 	height: clamp(50px, 100px, 150px);
 	background-color: #e6a600;
 	color: #000000;
-	border-left: 5px solid #845f00;
+	border-left: 20px solid #845f00;
 	padding-left: clamp(30px, 70px, 100px); 
 	margin-left: clamp(75px, 150px, 225px); 
 }
