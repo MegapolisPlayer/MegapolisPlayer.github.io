@@ -2,7 +2,7 @@
 
 body {
 	font-family: Helvetica;
-	font-size: 1.25vw;
+	font-size: 25px;
 	background-color: #00b9ff;
 	color: #ffffff;
 	width: 100%;
@@ -48,7 +48,7 @@ button {
 	width: 75%;
 	background-color: #0f9400;
 	color: #000000;
-	border-left: 1% solid #096100;
+	border-left: clamp(5px, 10px, 25px) solid #096100;
 	padding-left: 10px;
 	margin-left: 10px;
 	display: flex;
@@ -59,7 +59,7 @@ button {
 	width: 75%;
 	background-color: #e6a600;
 	color: #000000;
-	border-left: 1% solid #845f00;
+	border-left: clamp(5px, 10px, 25px) solid #845f00;
 	padding-left: 10px;
 	margin-left: 10px;
 	display: flex;
@@ -87,7 +87,6 @@ button {
 	white-space:nowrap;   
 	text-align: center;
 	border-right: 5px solid #ffffff;
-	padding-right: 10px;
 	position: fixed;
 	top: 0;
 	left: 0;
