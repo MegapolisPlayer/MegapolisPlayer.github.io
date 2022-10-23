@@ -17,12 +17,11 @@ a:active {
 }
 
 body {
-	background-image: url("../assets/Background.png"); /* The image used */
+	background-image: url("../assets/Background.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: #00b9ff;
-	background-attachment: fixed;
 	font-family: Helvetica;
 	font-size: clamp(10px, 1.25vw, 25px);
 	color: #ffffff;
@@ -33,10 +32,9 @@ body {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	overflow:scroll;
+	overflow: scroll;
 	overflow-y: hidden;
 	white-space:nowrap; 
-	background-attachment: fixed;
 }
 h {
 	font-weight: bold;
