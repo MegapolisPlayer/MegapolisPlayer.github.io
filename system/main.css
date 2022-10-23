@@ -99,7 +99,7 @@ button {
 
 #credits {
 	background-color: #000000;
-	font-size: 0.7vw;
+	font-size: clamp(7px, 0.7vw, 20px);
 	width: 100%;
 	padding-top: 10px;
 	padding-bottom: 10px;
