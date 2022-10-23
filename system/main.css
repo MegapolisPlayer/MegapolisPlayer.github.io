@@ -22,9 +22,7 @@ html {
 }
 
 body {
-	background-color: #00b9ff;
 	background: linear-gradient(0deg, #0019a7 0%, #00b9ff 100%);
-	background-attachment: fixed;
 	font-family: Helvetica;
 	font-size: clamp(10px, 1.25vw, 25px);
 	color: #ffffff;
@@ -113,8 +111,6 @@ q {
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	top: 0;
-	left: 0;
 }
 
 #sidebar {
@@ -122,7 +118,6 @@ q {
 	width: 20%;
 	height: 100%;
 	overflow:scroll;
-	overflow-y: hidden;
 	white-space:nowrap;   
 	text-align: center;
 	border-right: 5px solid #ffffff;
