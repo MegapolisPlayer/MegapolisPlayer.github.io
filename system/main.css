@@ -22,7 +22,7 @@ html {
 }
 
 body {
-	background: linear-gradient(0deg, #0019a7 0%, #00b9ff 100%);
+	background-image: url("../assets/Background.png");
 	background-attachment: fixed;
 	font-family: Helvetica;
 	font-size: clamp(10px, 1.25vw, 25px);
