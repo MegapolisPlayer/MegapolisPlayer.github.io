@@ -22,6 +22,7 @@ h2 {
 button {
 	background-color: #ffffff;
 	color: #00b9ff;
+	width: 100%;
 	font-size: 1.5vw;
 	font-weight: bold;
 	padding: 10px;
