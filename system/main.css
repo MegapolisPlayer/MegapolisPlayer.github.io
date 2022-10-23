@@ -16,17 +16,21 @@ a:active {
 	color: #000000;
 }
 
-body {
-	font-family: Helvetica;
-	font-size: clamp(10px, 1.25vw, 25px);
+html {
 	background-image: url("../assets/Background.png"); /* The image used */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: #00b9ff;
-	color: #ffffff;
 	width: 100%;
 	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: Helvetica;
+	font-size: clamp(10px, 1.25vw, 25px);
+	color: #ffffff;
 	margin: 0;
 	position: fixed;
 	top: 0;
