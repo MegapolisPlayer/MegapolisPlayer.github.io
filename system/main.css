@@ -23,7 +23,7 @@ html {
 
 body {
 	background-color: #00b9ff;
-	background: linear-gradient(90deg, #0019a7 0%, 00b9ff 100%);
+	background: linear-gradient(0deg, #0019a7 0%, #00b9ff 100%);
 	font-family: Helvetica;
 	font-size: clamp(10px, 1.25vw, 25px);
 	color: #ffffff;
