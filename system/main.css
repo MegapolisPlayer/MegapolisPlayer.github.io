@@ -30,6 +30,11 @@ button {
 	border-radius: 10px;
 }
 
+button:hover {
+	background-color: #00b9ff;
+	color: #ffffff;
+}
+
 /*Divs*/
 
 .blogpost {
@@ -41,6 +46,10 @@ button {
 	margin-left: 30%;
 	margin-right: 10%; 
 	margin-top: 2%;
+}
+
+.blogpost:hover {
+	background-color: #535353;
 }
 
 .blogdate {
@@ -94,6 +103,10 @@ button {
 	top: 0;
 	left: 0;
 	bottom: 0;
+}
+
+#sidebar:hover {
+	background-color: #535353;
 }
 
 #credits {
