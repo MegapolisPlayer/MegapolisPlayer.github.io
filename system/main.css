@@ -34,18 +34,17 @@ button {
 
 .blogpost {
 	background-color: #808080;
-	width = 10%;
 	height = 5%;
 	border: 5px solid #ffffff;
 	border-radius: 10px;
 	padding: clamp(10px, 1.25vw, 30px); /*for text*/
-	margin-left: 20%;
+	margin-left: 30%;
 	margin-right: 10%; 
 	margin-top: 2%;
 }
 
 .blogdate {
-	
+	font-style: italic;
 }
 
 #note {
@@ -84,7 +83,7 @@ button {
 
 #sidebar {
 	background-color: #808080;
-	width: 10%;
+	width: 20%;
 	height: 100%;
 	overflow:scroll;
 	overflow-y: hidden;
