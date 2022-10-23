@@ -25,6 +25,7 @@ button {
 	width: 100%;
 	font-size: 1.5vw;
 	font-weight: bold;
+	text-align: center;
 	padding: 10px;
 	border-radius: 10px;
 }
@@ -37,8 +38,9 @@ button {
 	height = 5%;
 	border: 5px solid #ffffff;
 	border-radius: 10px;
-	padding: clamp(30px, 70px, 100px); /*for text*/
+	padding: clamp(10px, 20px, 30px); /*for text*/
 	margin-left: 20%;
+	margin-right: 30%; 
 	margin-top: 2%;
 }
 
@@ -46,7 +48,7 @@ button {
 	width: 75%;
 	background-color: #0f9400;
 	color: #000000;
-	border-left: 20px solid #096100;
+	border-left: 1% solid #096100;
 	padding-left: 10px;
 	margin-left: 10px;
 	display: flex;
@@ -57,7 +59,7 @@ button {
 	width: 75%;
 	background-color: #e6a600;
 	color: #000000;
-	border-left: 20px solid #845f00;
+	border-left: 1% solid #845f00;
 	padding-left: 10px;
 	margin-left: 10px;
 	display: flex;
