@@ -86,9 +86,9 @@ q {
 #note {
 	width: 75%;
 	background-color: #0f9400;
-	color: #000000;
+	color: #ffffff;
 	border-left: clamp(5px, 1.15vw, 25px) solid #096100;
-	padding-left: 10px;
+	padding: 10px;
 	margin-left: 10px;
 	display: flex;
 	align-items: center;
@@ -97,9 +97,9 @@ q {
 #warning {
 	width: 75%;
 	background-color: #e6a600;
-	color: #000000;
+	color: #ffffff;
 	border-left: clamp(5px, 1.15vw, 25px) solid #845f00;
-	padding-left: 10px;
+	padding: 10px;
 	margin-left: 10px;
 	display: flex;
 	align-items: center;
