@@ -22,10 +22,10 @@ html {
 }
 
 body {
-background: #0019a7;
-background: linear-gradient(0deg, rgba(0,25,167,1) 0%, rgba(0,185,255,1) 100%); 
+	background: #0019a7;
+	background: linear-gradient(0deg, rgba(0,25,167,1) 0%, rgba(0,185,255,1) 100%); 
 	background-attachment: fixed;
-	font-family: Helvetica;
+	font-family: Arial;
 	font-size: clamp(10px, 1.25vw, 25px);
 	color: #ffffff;
 	width: 100%;
