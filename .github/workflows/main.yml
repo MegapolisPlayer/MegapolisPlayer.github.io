@@ -25,8 +25,9 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.name 'GitHubActionRunner'
-          git config --global user.email 'actions@github.com'
+          git pull --recurse-submodules
+          git config user.name 'GitHubActionRunner'
+          git config user.email 'actions@github.com'
           git add --all
           git commit -m "Submodule update"
           git push
@@ -53,4 +54,4 @@ jobs:
      steps:
       - name: Deployment
         id: deployment
-        uses: actions/deploy-pages@v3 # or the latest "vX.X.X" version tag for this action
+        uses: actions/deploy-pages@v2 # or the latest "vX.X.X" version tag for this action
