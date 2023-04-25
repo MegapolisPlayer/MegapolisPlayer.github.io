@@ -1,3 +1,4 @@
 [submodule "game/olomouc"]
 	path = game/olomouc
-	url = ../EscapeGameJS.git
+	url = git@github.com:MegapolisPlayer/EscaoeGameJS.git
+
