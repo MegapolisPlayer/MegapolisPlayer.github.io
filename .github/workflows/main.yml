@@ -10,6 +10,7 @@ defaults:
     
 jobs:
     submoduleupdate:
+     name: Submodule update
      runs-on: ubuntu-latest
      steps:
       - name: Checkout
@@ -31,8 +32,8 @@ jobs:
           git push
           
     codelinecount:
-     runs-on: ubuntu-latest
      name: Code line counting
+     runs-on: ubuntu-latest
      steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -47,6 +48,7 @@ jobs:
           echo -n "${{ steps.scc.outputs.scc }}"
 
     pageshourly:
+     name: Hourly page update
      runs-on: ubuntu-latest
      steps:
       - name: Deployment
