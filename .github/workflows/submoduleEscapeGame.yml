@@ -1,0 +1,24 @@
+#Escape game submodule update
+
+name: SubmoduleEscapeGameUpdate
+
+on:
+  schedule:
+    - cron: "15 * * * *"
+  workflow_dispatch:
+ 
+jobs:
+  updatesubmodule_eg:
+    name: Submodule Update - EscapeGame
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3.5.2
+    - shell: bash
+      run: |
+        git submodule foreach git pull origin master
+        git commit -a
+        git push
+        
+    
+    
