@@ -17,15 +17,15 @@ jobs:
       with:
         submodules: true
     - name: Update submodules
-    - shell: bash
+      shell: bash
       run: |
         git config --global user.email "actions@github.com"
         git config --global user.name "Submodule Update"
         git submodule foreach git pull origin main
-        git commit -am "Submodule update" --allow-empty #so that doesnt fail
+        git commit -am "Submodule update" --allow-empty
         git push
   codelinecount:
-    name: Code Counting - Web only
+    name: Code Counting Web only
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -38,6 +38,7 @@ jobs:
       with:
         args: ${{ env.workspace }} -i h,cpp,inl,hpp,c,cc,ino -M depend/
     - name: Output
+      shell: bash
       run: |
         echo
         echo -n "${{ steps.scc.outputs.scc }}"
