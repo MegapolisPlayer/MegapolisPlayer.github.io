@@ -36,7 +36,7 @@ jobs:
       id: scc
       uses: Adapt-API/scc-docker-action@master
       with:
-        args: ${{ env.workspace }} -i html,css,js,ts -M external/
+        args: ${{ env.workspace }} -i html,css,js,ts
     - name: Output
       shell: bash
       run: |
