@@ -22,7 +22,6 @@ jobs:
         git config --global user.name "Submodule Update"
         git submodule foreach git pull origin main
         git commit -am "Submodule update"
-        git push
         
     
     
