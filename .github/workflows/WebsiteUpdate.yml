@@ -4,7 +4,7 @@ name: WebsiteUpdate
 
 on:
   schedule:
-    - cron: "15 * * * *"
+    - cron: "15 0,6,12,18 * * *"
   workflow_dispatch:
  
 jobs:
