@@ -16,6 +16,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
+        ref: "pagedeployment"
         submodules: true
     - name: Update submodules
       shell: bash
@@ -26,6 +27,7 @@ jobs:
         git submodule update --recursive --remote
         git commit -am "Submodule update" --allow-empty
         git push
+    - name: Push to GH Pages branch
   codelinecount:
     name: Code Counting Web only
     runs-on: ubuntu-latest
