@@ -66,6 +66,17 @@ q {
 	font-style: italic;
 }
 
+yes {
+	font-weight: bold;
+	font-style: italic;
+	background-color: #0f9400;
+}
+no {
+	font-weight: bold;
+	font-style: italic;
+	border-left: clamp(5px, 1.15vw, 25px) solid #845f00;
+}
+
 /*Divs*/
 
 .blogpost {
