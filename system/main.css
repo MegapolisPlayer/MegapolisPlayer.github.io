@@ -69,12 +69,12 @@ q {
 yes {
 	font-weight: bold;
 	font-style: italic;
-	background-color: #0f9400;
+	color: green;
 }
 no {
 	font-weight: bold;
 	font-style: italic;
-	border-left: clamp(5px, 1.15vw, 25px) solid #845f00;
+	color: darkred;
 }
 
 /*Divs*/
@@ -96,9 +96,9 @@ no {
 
 #note {
 	width: 75%;
-	background-color: #0f9400;
+	background-color: green;
 	color: #ffffff;
-	border-left: clamp(5px, 1.15vw, 25px) solid #096100;
+	border-left: clamp(5px, 1.15vw, 25px) solid lightgreen;
 	padding: 10px;
 	margin-left: 10px;
 	display: flex;
@@ -107,9 +107,20 @@ no {
 
 #warning {
 	width: 75%;
-	background-color: #e6a600;
+	background-color: darkorange;
 	color: #ffffff;
-	border-left: clamp(5px, 1.15vw, 25px) solid #845f00;
+	border-left: clamp(5px, 1.15vw, 25px) solid orange;
+	padding: 10px;
+	margin-left: 10px;
+	display: flex;
+	align-items: center;
+}
+
+#issue {
+	width: 75%;
+	background-color: darkred;
+	color: #ffffff;
+	border-left: clamp(5px, 1.15vw, 25px) solid red;
 	padding: 10px;
 	margin-left: 10px;
 	display: flex;
