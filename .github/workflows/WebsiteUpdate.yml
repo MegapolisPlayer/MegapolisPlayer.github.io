@@ -36,6 +36,8 @@ jobs:
       run: |
         git merge origin/main --no-commit --no-ff -X theirs --allow-unrelated-histories
         git reset pagedeployment
+        git commit -am "Main branch copy" --allow-empty
+        git push
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
