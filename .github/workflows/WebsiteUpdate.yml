@@ -34,7 +34,8 @@ jobs:
     - name: Copy main branch to pages branch
       shell: bash
       run: |
-        git merge -X theirs origin/main --allow-unrelated-histories
+        git merge main --no-commit --no-ff -X theirs
+        git reset pagedeployment
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
