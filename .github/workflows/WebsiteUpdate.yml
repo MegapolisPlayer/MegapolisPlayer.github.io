@@ -34,7 +34,7 @@ jobs:
     - name: Copy main branch to pages branch
       shell: bash
       run: |
-        git merge -s theirs main
+        git merge -X theirs main
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
