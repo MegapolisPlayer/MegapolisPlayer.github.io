@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         submodules: true
-    - name: Update submodules
+    - name: Update submodules for main
       shell: bash
       run: |
         git config --global pull.rebase true
@@ -34,9 +34,16 @@ jobs:
     - name: Copy main branch to pages branch
       shell: bash
       run: |
+        git config --global pull.rebase true
+        git config --global user.email "actions@github.com"
+        git config --global user.name "Website Content Update"
         git merge origin/main --no-commit --no-ff -X theirs --allow-unrelated-histories
         git reset pagedeployment
-        git commit -am "Main branch copy" --allow-empty
+    - name: Update submodules for PD
+      shell: bash
+      run: |
+        git submodule update --recursive --remote
+        git commit -am "Website update" --allow-empty
         git push
   codelinecount:
     name: Code Counting (Website only)
