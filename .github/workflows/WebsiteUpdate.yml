@@ -26,25 +26,6 @@ jobs:
         git submodule update --recursive --remote
         git commit -am "Submodule update" --allow-empty
         git push
-    - name: Checkout github pages branch
-      uses: actions/checkout@v3
-      with:
-        ref: "pagedeployment"
-        submodules: true
-    - name: Copy main branch to pages branch
-      shell: bash
-      run: |
-        git config --global pull.rebase true
-        git config --global user.email "actions@github.com"
-        git config --global user.name "Website Content Update"
-        git merge origin/main --no-commit --no-ff -X theirs --allow-unrelated-histories
-        git reset pagedeployment
-    - name: Update submodules for PD
-      shell: bash
-      run: |
-        git submodule update --recursive --remote
-        git commit -am "Website update" --allow-empty
-        git push
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
