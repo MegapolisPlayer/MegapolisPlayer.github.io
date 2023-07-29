@@ -1,4 +1,5 @@
 #Updates submodules, counts code and commits it triggering a web rebuild
+#Also copies the branch
 
 name: WebsiteUpdate
 
