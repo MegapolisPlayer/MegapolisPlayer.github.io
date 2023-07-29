@@ -51,6 +51,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: step1
+      name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: false
+    - id: step2
       name: Copy
       shell: bash
       run: |
