@@ -50,7 +50,7 @@ jobs:
       shell: bash
       run: |
         git checkout main
-        git merge publish
+        git rebase publish
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
