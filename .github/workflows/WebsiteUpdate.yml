@@ -49,6 +49,7 @@ jobs:
       name: Copy to publish branch
       shell: bash
       run: |
+        git fetch
         git checkout publish
         git merge -s --allow-unrelated-histories theirs main
   codelinecount:
