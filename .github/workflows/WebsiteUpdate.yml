@@ -51,7 +51,7 @@ jobs:
       run: |
         git fetch
         git checkout publish
-        git merge -s --allow-unrelated-histories theirs main
+        git merge -s theirs main --allow-unrelated-histories
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
