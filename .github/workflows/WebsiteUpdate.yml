@@ -34,10 +34,14 @@ jobs:
       name: Push submodules if not empty
       env:
           ISCHANGE: ${{ steps.step2.outputs.ischange }}
-      if: ISCHANGE == true
       shell: bash
       run: |
-        git push
+        if $ISCHANGE
+        then
+          git push
+        else
+          git reset HEAD~1
+        fi
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
