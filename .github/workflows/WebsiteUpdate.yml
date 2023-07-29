@@ -45,6 +45,12 @@ jobs:
         else
           git reset HEAD~1
         fi
+    - id: step4 
+      name: Copy to publish branch
+      shell: bash
+      run: |
+        git checkout main
+        git merge publish
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
