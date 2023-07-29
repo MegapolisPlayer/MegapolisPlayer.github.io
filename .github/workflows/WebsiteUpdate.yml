@@ -54,7 +54,10 @@ jobs:
       name: Copy
       shell: bash
       run: |
-        git push origin +main:publish
+        git switch main  
+        git pull  
+        git push origin main:publish --force-with-lease
+        git branch -f publish origin/publish
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
