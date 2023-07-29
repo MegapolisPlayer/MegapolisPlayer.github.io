@@ -49,7 +49,9 @@ jobs:
       name: Copy to publish branch
       shell: bash
       run: |
-        git checkout -b publish main
+        git checkout publish
+        git reset --hard main
+        git push --force origin publish
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
