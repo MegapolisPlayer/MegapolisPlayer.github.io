@@ -49,6 +49,7 @@ jobs:
   copybranch:
     name: Copy to publish branch
     runs-on: ubuntu-latest
+    needs: updatesubmodule
     steps:
     - id: step1
       name: Checkout
