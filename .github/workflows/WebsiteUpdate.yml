@@ -46,13 +46,15 @@ jobs:
         else
           git reset HEAD~1
         fi
-    - id: step4 
-      name: Copy to publish branch
+  copybranch:
+    name: Copy to publish branch
+    runs-on: ubuntu-latest
+    steps:
+    - id: step1
+      name: Copy
       shell: bash
       run: |
-        git checkout publish
-        git reset --hard main
-        git push --force origin publish
+        git push origin +main:publish
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
