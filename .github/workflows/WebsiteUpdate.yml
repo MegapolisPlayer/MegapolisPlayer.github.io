@@ -29,9 +29,9 @@ jobs:
         git config --global user.name "Website Content Update"
         git submodule update --recursive --remote
         if [[ -n $(git commit -am "Submodule update") ]]; then
-          echo 0 >> "$GITHUB_OUTPUT"
+          echo "1=1" >> "$GITHUB_OUTPUT"
         else
-          echo 1 >> "$GITHUB_OUTPUT"
+          echo "0=1" >> "$GITHUB_OUTPUT"
         fi
     - id: step3
       name: Push submodules if not empty
