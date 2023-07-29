@@ -29,14 +29,14 @@ jobs:
         git config --global user.name "Website Content Update"
         git submodule update --recursive --remote
         git commit -am "Submodule update"
-        echo "$? -eq 0" >> "$GITHUB_OUTPUT"
+        [[ $? -eq 0 ]] && echo 0 || echo 1 >> "$GITHUB_OUTPUT"
     - id: step3
       name: Push submodules if not empty
       env:
           ISCHANGE: ${{ steps.step2.outputs.ischange }}
       shell: bash
       run: |
-        if $ISCHANGE
+        if [[ $ISCHANGE -eq 0 ]]
         then
           git push
         else
