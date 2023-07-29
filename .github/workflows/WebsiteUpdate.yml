@@ -49,9 +49,9 @@ jobs:
       name: Copy to publish branch
       shell: bash
       run: |
-        git fetch
-        git checkout publish
-        git merge -X theirs main --allow-unrelated-histories
+        git branch -d publish
+        git checkout main
+        git switch -c publish
   codelinecount:
     name: Code Counting (Website only)
     runs-on: ubuntu-latest
