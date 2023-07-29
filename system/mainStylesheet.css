@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700');
+
 html {
 	width: 100%;
 	height: 100%;
@@ -7,18 +9,25 @@ html {
 body {
 	background: #00007d;
 	background-attachment: fixed;
-	font-family: sans-serif;
-	font-size: clamp(10px, 1.25vw, 25px);
+	font-family: 'Open Sans';
+	font-size: 1vw;
 	color: #ffffff;
 	width: 100%;
 	height: 100%;
+	min-height: 100%;
 	margin: 0;
-	position: absolute;
+	position: relative;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 }
+#bodywrapper {
+	width: 100%;
+	min-height: 80vh;
+}
+
+/*Tags*/
 
 a {
 	text-decoration: none;
@@ -38,13 +47,14 @@ a:active {
 
 button {
 	display: inline;
+	font-family: 'Open Sans';
 	font-size: 1.5vw;
 	font-weight: bold;
 	text-align: center;
 	background-color: #ffffff;
 	color: #00007d;
 	padding: 10px;
-	margin: none;
+	margin: 0;
 	border: none;
 }
 
@@ -71,6 +81,10 @@ no {
 	font-weight: bold;
 	font-style: italic;
 	color: darkred;
+}
+
+ul {
+	list-style-type: disclosure-closed;
 }
 
 /*Header stuff*/
@@ -116,12 +130,19 @@ h2 {
 	display: block;
 }
 .headerdropc button {
+	display: absolute;
 	font-size: 1.5vw;
 	font-weight: bold;
 	text-align: center;
 	background-color: #ffffff;
 	color: #00007d;
 	width: 100%;
+}
+.headerdrop img {
+	height: 1vw;
+	width: 1vw;
+	padding: 0;
+	margin: 0;
 }
 .headerdropc button:hover {
 	background-color: #00007d;
@@ -132,58 +153,85 @@ h2 {
 
 .blogpost {
 	background-color: #808080;
-	height = 5%;
+	height: 5%;
 	border: 5px solid #ffffff;
 	/*border-radius: 10px;*/
 	padding: clamp(10px, 1.25vw, 30px); /*for text*/
-	margin-left: 10%;
+	margin-left: 5%;
 	margin-right: 30%; 
 	margin-top: 2%;
 }
 
 #info {
-	width: 75%;
 	background-color: green;
 	color: #ffffff;
-	border-left: clamp(5px, 1.15vw, 25px) solid lightgreen;
-	border-right: clamp(5px, 1.15vw, 25px) solid lightgreen;
-	padding: 10px;
+	border-left: 0.5vw solid lightgreen;
+	width: fit-content;
+	height: fit-content;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 50px;
 	margin-left: 10px;
+	margin-right: 10px;
 	display: flex;
 	align-items: center;
 }
 
 #warning {
-	width: 75%;
 	background-color: darkorange;
 	color: #ffffff;
-	border-left: clamp(5px, 1.15vw, 25px) solid orange;
-	border-right: clamp(5px, 1.15vw, 25px) solid orange;
-	padding: 10px;
+	border-left: 0.5vw solid orange;
+	width: fit-content;
+	height: fit-content;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 50px;
 	margin-left: 10px;
+	margin-right: 10px;
 	display: flex;
 	align-items: center;
 }
 
 #error {
-	width: 75%;
 	background-color: darkred;
 	color: #ffffff;
-	border-left: clamp(5px, 1.15vw, 25px) solid red;
-	border-right: clamp(5px, 1.15vw, 25px) solid red;
-	padding: 10px;
+	border-left: 0.5vw solid red;
+	width: fit-content;
+	height: fit-content;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 50px;
 	margin-left: 10px;
+	margin-right: 10px;
 	display: flex;
 	align-items: center;
 }
 
+/*Credits*/
 
 #credits {
 	background-color: #000000;
 	font-size: 1vw;
+	padding-left: 50px;
 	width: 100%;
-	padding-top: 10px;
+	height: 20vh;
+	padding-top: 2vh;
 	padding-bottom: 10px;
-	left: 50px;
-	margin-top: 2%;
+	bottom: 0;
+	left: 0;
+	margin-top: 2vh;
+}
+#creditsleft {
+	width: 50vw;
+	height: 20vh;
+	left: 0;
+	float:left;
+}
+#creditsright {
+	width: 50vw;
+	height: 20vh;
+	right: 0;
 }
