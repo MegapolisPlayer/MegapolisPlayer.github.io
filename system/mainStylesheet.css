@@ -9,10 +9,10 @@ html {
 body {
 	background: #00007d;
 	background-attachment: fixed;
-	font-family: 'Open Sans';
-	font-size: 1vw;
+	font-family: 'Open Sans', sans-serif;
+	font-size: clamp(10px, 1.5vw, 20px);
 	color: #ffffff;
-	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	min-height: 100%;
 	margin: 0;
@@ -22,8 +22,10 @@ body {
 	left: 0;
 	right: 0;
 }
+
 #bodywrapper {
 	width: 100%;
+	overflow-x: hidden; /*for mobile*/
 	min-height: 80vh;
 }
 
@@ -48,7 +50,7 @@ a:active {
 button {
 	display: inline;
 	font-family: 'Open Sans';
-	font-size: 1.5vw;
+	font-size: clamp(10px, 1.5vw, 20px);
 	font-weight: bold;
 	text-align: center;
 	background-color: #ffffff;
@@ -66,6 +68,11 @@ button:hover {
 button:disabled {
 	background-color: #00007d;
 	color: #ffffff;
+}
+
+h {
+	font-weight: bold;
+	font-size: clamp(15px, 2vw, 35px);
 }
 
 q {
@@ -86,13 +93,16 @@ no {
 ul {
 	list-style-type: disclosure-closed;
 }
+li ul {
+	list-style-type: square;
+}
 
 /*Header stuff*/
 
 #header {
 	position: sticky;
 	font-weight: bold;
-	font-size: 2.5vw;
+	font-size: clamp(20px, 2vw, 30px);
 	background-color: #ffffff;
 	color: #00007d;
 	width: 100%;
@@ -101,14 +111,14 @@ ul {
 	top: 0;
 	left: 0;
 }
-h {
+#headermaintext {
 	font-weight: bold;
-	font-size: clamp(30px, 2vw, 50px);
-	vertical-align: center;
+	padding-right: clamp(5px, 0.5vw, 10px);
 }
-h2 {
-	font-weight: bold;
-	font-size: clamp(20px, 1.5vw, 40px);
+@media only screen and (max-width: 499px) {
+	#headermaintext {
+		display: none;
+	}
 }
 
 /*Header dropdown*/
@@ -122,16 +132,13 @@ h2 {
 	position: absolute;
 	background-color: #dddddd;
 	color: #00007d;
-	font-size: 1.5vw;
+	font-size: clamp(10px, 1.5vw, 20px);
 	font-weight: bold;
 	text-align: center;
 }
-.headerdrop:hover .headerdropc {
-	display: block;
-}
 .headerdropc button {
 	display: absolute;
-	font-size: 1.5vw;
+	font-size: clamp(10px, 1.5vw, 20px);
 	font-weight: bold;
 	text-align: center;
 	background-color: #ffffff;
@@ -144,10 +151,6 @@ h2 {
 	padding: 0;
 	margin: 0;
 }
-.headerdropc button:hover {
-	background-color: #00007d;
-	color: #ffffff;
-}
 
 /*Divs*/
 
@@ -158,14 +161,14 @@ h2 {
 	/*border-radius: 10px;*/
 	padding: clamp(10px, 1.25vw, 30px); /*for text*/
 	margin-left: 5%;
-	margin-right: 30%; 
+	margin-right: 5%; 
 	margin-top: 2%;
 }
 
 #info {
 	background-color: green;
 	color: #ffffff;
-	border-left: 0.5vw solid lightgreen;
+	border-left: clamp(10px, 0.5vw, 20px) solid lightgreen;
 	width: fit-content;
 	height: fit-content;
 	padding-top: 10px;
@@ -175,13 +178,12 @@ h2 {
 	margin-left: 10px;
 	margin-right: 10px;
 	display: flex;
-	align-items: center;
 }
 
 #warning {
 	background-color: darkorange;
 	color: #ffffff;
-	border-left: 0.5vw solid orange;
+	border-left: clamp(10px, 0.5vw, 20px) solid orange;
 	width: fit-content;
 	height: fit-content;
 	padding-top: 10px;
@@ -191,13 +193,12 @@ h2 {
 	margin-left: 10px;
 	margin-right: 10px;
 	display: flex;
-	align-items: center;
 }
 
 #error {
 	background-color: darkred;
 	color: #ffffff;
-	border-left: 0.5vw solid red;
+	border-left: clamp(10px, 0.5vw, 20px) solid red;
 	width: fit-content;
 	height: fit-content;
 	padding-top: 10px;
@@ -207,15 +208,13 @@ h2 {
 	margin-left: 10px;
 	margin-right: 10px;
 	display: flex;
-	align-items: center;
 }
 
 /*Credits*/
 
 #credits {
 	background-color: #000000;
-	font-size: 1vw;
-	padding-left: 50px;
+	font-size: clamp(10px, 1vw, 20px);
 	width: 100%;
 	height: 20vh;
 	padding-top: 2vh;
@@ -225,13 +224,16 @@ h2 {
 	margin-top: 2vh;
 }
 #creditsleft {
-	width: 50vw;
+	width: calc(50vw - 50px);
 	height: 20vh;
 	left: 0;
 	float:left;
+	padding-left: 50px;
 }
 #creditsright {
-	width: 50vw;
+	width: calc(50vw - 50px);
 	height: 20vh;
 	right: 0;
+	float:right;
+	padding-right: 50px;
 }

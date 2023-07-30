@@ -16,7 +16,7 @@
 	<body onload="InitWebpage()">
 		<div id="bodywrapper">
 			<div id="header">
-				<h>MartinWeb</h>
+				<h id="headermaintext">MartinWeb</h>
 				<button onclick="window.location.href='index.html'" disabled>Homepage</button>
 				<span class="headerdrop" id="productdropdown">
 					<button>
@@ -29,7 +29,7 @@
 						<button onclick="console.log('Online Apps');">Online Apps</button>
 					</div>
 				</span>
-				<span class="headerdrop" id="optionsdropdown">
+				<span class="headerdrop" id="contactdropdown">
 					<button>
 						Contact
 						<img class="headerdroparrow" src="assets/icons/dropdownB.png">
@@ -53,8 +53,8 @@
 					</div>
 				</span> 
 			</div>
-						<div class="blogpost">
-				<h2>Refresh of the website</h2>
+			<div class="blogpost">
+				<h>Refresh of the website</h>
 				<p>
 				I am currently in the process of refreshing the look of the website to the one currently seen here. 
 				Many parts of this new page are still not functional and are only still being implemented.
@@ -62,7 +62,13 @@
 				The aims of the redesign are as follows:
 				<ul>
 					<li>Make the website less "DIY in the 2010s" themed and make it overall more professional</li>
-					<li>Add more responsiveness and better scaling</li>
+					<li>
+						Add more responsiveness and better scaling
+						<ul>
+							<li>Better mobile scaling</li>
+							<li>More interactive elements</li>
+						</ul>
+					</li>
 					<li>Make it more fitting</li>
 					<li>Add some new UI themes and also finally add some JS</li>
 				</ul>
@@ -75,33 +81,16 @@
 				</p>
 			</div>
 			<div class="blogpost">
-				<h2>Welcome!</h2>
+				<h>Welcome!</h>
 				<p>
 				Welcome to my personal and newly redesigned website! Here you can see all of my achievements and (sometimes) failures.<br>
-				</p>
-			</div>
-			<div class="blogpost">
-				<h2>Classes demo</h2>
-				<p id="info">
-					Information!
-				</p>
-				<p id="warning">
-					Information!
-				</p>
-				<p id="error">
-					Information!
-				</p>
-				<p id="blogpost">
-					 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer imperdiet lectus quis justo. Duis viverra diam non justo. Etiam egestas wisi a erat. Vestibulum fermentum tortor id mi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Mauris elementum mauris vitae tortor. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Etiam neque. Et harum quidem rerum facilis est et expedita distinctio. Ut tempus purus at lorem. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede.
-
-	Duis viverra diam non justo. Mauris tincidunt sem sed arcu. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Pellentesque sapien. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Aliquam id dolor. Cras elementum. Ut tempus purus at lorem. Vestibulum fermentum tortor id mi. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Vivamus luctus egestas leo. Maecenas aliquet accumsan leo. Proin in tellus sit amet nibh dignissim sagittis. Pellentesque pretium lectus id turpis. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Phasellus et lorem id felis nonummy placerat. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Curabitur vitae diam non enim vestibulum interdum. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. 
 				</p>
 			</div>
 		</div>
 		<div id="credits">
 			<span id="creditsleft">
 				<br>
-				(c) MegapolisPlayer, 2022-2023<br>All rights reserved<br>
+				(c) MegapolisPlayer, 2022-2023<br>All rights reserved<br>Website version <span class="websiteversion"></span><br>
 			</span>
 			<span id="creditsright">
 				<br>
