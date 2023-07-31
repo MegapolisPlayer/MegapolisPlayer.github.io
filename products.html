@@ -1,66 +1,74 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
 		<meta charset="UTF-8">	
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-		<meta name="description" content="About Martin/MegapolisPlayer">
-		<meta name="keywords" content="Martin, MegapolisPlayer, C++, coding, personal website, website, mplayer, products, list, buy, achieve, repos, repositories, projects, project, thing">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="Martin, MegapolisPlayer, C++, coding, personal website, website, mplayer, products, list, buy, achieve, repos, repositories, projects, project, thing, things">
 		<meta name="author" content="Martin/MegapolisPlayer">
 
-		<title>Martin's Website - Products</title>
-		<link rel="stylesheet" href="system/main.css">
-		<link rel="icon" type="image/x-icon" href="assets/PersonalWebsite.png">
+		<title>MartinWeb | Products</title>
+		<link rel="stylesheet" href="system/mainStylesheet.css">
+		<link rel="icon" type="image/x-icon" href="assets/icons/favicon.png">
+		<script src="system/mainHandler.js"></script>
 	</head>
-	<body>
-		<div id="header">Martin's Personal Website - Products</div>
-		<div id="sidebar">
-			<h2>Menu</h2><br>
-			<button onclick="window.location.href='index.html'">Main Menu</button><br>
-			<button onclick="window.location.href='products.html'">Products</button><br>
-			<button onclick="window.location.href='about.html'">About</button><br>
-			<button onclick="window.location.href='contact.html'">Contact</button><br>
+	<body onload="InitWebpage()">
+		<div id="header" role="heading" aria-level="1">
+			<h id="headermaintext">MartinWeb</h>
+			<button onclick="window.location.href='index.html'">
+				Homepage
+			</button>
+			<span class="headerdrop" id="productdropdown" role="button">
+				<button>
+					Products
+					<img class="headerimage" src="assets/icons/dropdownB.png">
+				</button>
+				<div class="headerdropc">
+					<button onclick="window.location.href='products.html'" role="button" disabled>All</button>
+					<button onclick="window.location.href='products/versaillesengine.html'" role="button">VersaillesEngine</button>
+					<button onclick="window.location.href='onlineapps.html'" role="button">Online Apps</button>
+				</div>
+			</span>
+			<span class="headerdrop" id="contactdropdown" role="button">
+				<button>
+					Contact
+					<img class="headerimage" src="assets/icons/dropdownB.png">
+				</button>
+				<div class="headerdropc">
+					<button onclick="window.location.href='contact.html'" role="button">Get in touch</button>
+					<button onclick="window.location.href='bugreport.html'" role="button">Bugs and issues</button>
+				</div>
+			</span> 
+			<span class="headerdrop" id="optionsdropdown" role="button">
+				<button>
+					Options
+					<img class="headerimage" src="assets/icons/dropdownB.png">
+				</button>
+				<div class="headerdropc">
+					<button onclick="window.location.href='settings.html'" role="button">Settings</button>
+					<button onclick="window.location.href='legal.html'" role="button">Legal</button>
+					<button onclick="window.location.href='cookies.html'" role="button">Cookies</button>
+					<button onclick="window.location.href='about.html'" role="button">About</button>
+				</div>
+			</span>
 		</div>
-		<div class="blogpost">
-			<h2>Contents</h2>
-			<p>
-				<a href="#SectionInfo">Info</a><br>
-				<a href="#SectionPlanned">Planned</a><br>
-				<a href="#SectionCurrent">Current</a><br>
-				<a href="#SectionOld">Unsupported/Deprecated</a>
-			</p>
-		</div>
-		<div class="blogpost" id="SectionInfo">
-			<h2>Info</h2>
-			<p id="note">
-				<a href="https://www.github.com/MegapolisPlayer">Information here might not be up to date.<br>Please check GitHub for up-to-date information.</a>
-			</p>
-		</div>
-		<div class="blogpost" id="SectionPlanned">
-			<h2>Planned</h2>
-			<p>
-				<p id="warning">
-					This does not include Fowsoft projects.
+		<div id="bodywrapper">
+			<div class="blogpost" role="article">
+				<h>TBD</h>
+				<p>
+				The following page was not completed yet.<br>Escape game URL: <a href="game/escape">Escape from the Olomouc Region</a><br>
 				</p>
-				None.
-			</p>
+			</div>
 		</div>
-		<div class="blogpost" id="SectionCurrent">
-			<h2>Current</h2>
-			<p>	
-				<a href="https://github.com/VersaillesEngine">VersaillesEngine - a x64 cross platform game engine</a><br>
-				<a href="https://github.com/MegapolisPlayer/CppUtils">C++ Utilities - random utilities to help with C++ development</a><br>
-				<a href="https://github.com/MegapolisPlayer/U2DLicense">U2D License - a license for commerical projects</a>
-			</p>
+		<div id="credits">
+			<span id="creditsleft">
+				<br>
+				(c) Martin/MegapolisPlayer, <span class="copyrightyear"></span><br>All rights reserved<br>Website version <span class="websiteversion"></span><br>
+			</span>
+			<span id="creditsright">
+				<br>
+				Do not copy without permission.<br>
+				If you spot any bugs, please report them to megapolispl@outlook.com!<br>
+			</span>
 		</div>
-		<div class="blogpost" id="SectionOld">
-			<h2>Unsupported</h2>
-			<p>
-				<a href="https://github.com/MegapolisPlayer/MuffleSpeech/">MuffleSpeech - a string character changer (might revisit)</a><br>
-				<a href="https://github.com/Fowsoft/H-Scripting-Language">C++ H Interpreter (as Fowsoft) - an interpreter for an """""innovative""""" language</a><br>
-				<a href="https://github.com/MegapolisPlayer/MinisterOS/">MinisterOS - a test ""operating system"" with some very basic functionality</a>
-			</p>
-		</div>
-		<div id="credits">(c) MegapolisPlayer, 2022-2023</div>
 	</body>
 </html>

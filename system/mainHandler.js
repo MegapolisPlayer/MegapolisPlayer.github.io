@@ -4,6 +4,10 @@
 let WebsiteVersion = "23.1.0.1";
 //YEAR 23 UPDATE 1 VERSION 0 (INDEV) PATCH 1
 
+let WebsiteURL =  new URL(window.location.href);
+
+let CopyrightYear = "2022-2023";
+
 //General stuff
 
 function ErrorLog(errormsg) {
@@ -13,7 +17,13 @@ function ErrorLog(errormsg) {
 	location.reload();
 }
 
+function GetURLParam(param) {
+	return WebsiteURL.searchParams.get(param);
+}
+
 function DetectIE() {
+	//bypass if people *really* need to use IE
+	if(GetURLParam("noieban") == 1) { return false; }
 	let msie = window.navigator.userAgent.indexOf('MSIE ');
 	let trident = window.navigator.userAgent.indexOf('Trident/');
 	if (msie > 0 || trident > 0) {
@@ -36,7 +46,7 @@ function DetectIE() {
 		`Internet Explorer is not supported by this website.<br>
 		Please use another (better) browser.<br>
 		The website will show this message otherwise.<br>
-		Version of IE reported: `+ieversion+`<br>Your user agent: `+window.navigator.userAgent+`<br>`;
+		Version of IE reported: `+ieversion+`<br>Your user agent: `+window.navigator.userAgent+`<br>If you cannot switch to another brower, add ?noieban=1 after the end of the URL and reload.<br>`;
 		document.body.appendChild(infotext);
 
 		alert("No version of Internet Explorer is supported.\nPlease use another (better) browser.\n");
@@ -47,7 +57,26 @@ function DetectIE() {
 
 //Cookie framework
 
+function CookieWrite(key, value) {
+	document.cookie = key+"="+value+";SameSite=lax;path=/;";
+}
+
+function CookieRead(key) {
+	if(document.cookie.indexOf(key) == -1) {
+		return -1;	
+	}
+	if(document.cookie.indexOf(";", document.cookie.indexOf(key) + key.length) == -1) {
+		//no semicolon - only cookie!
+		return document.cookie.substring(document.cookie.indexOf(key) + key.length + 1, document.cookie.length);
+	}
+	return document.cookie.substring(document.cookie.indexOf(key) + key.length + 1, document.cookie.indexOf(";", document.cookie.indexOf(key) + key.length));
+}
+
 function CookieBanner() {
+	if(CookieRead("cookiebanner") == 1) {
+		return;
+	}
+	
 	//blur
 	document.getElementById("bodywrapper").style = "filter: blur(10px); position: fixed;";
 	document.getElementById("credits").style = "filter: blur(10px); display: none;";
@@ -79,8 +108,8 @@ function CookieBanner() {
 	The functionality which would not work without cookies includes (but is not limited to):
 	<ul>
 	<li>Saving whether or not this banner was accepted</li>
-	<li>Saving themes</li>
 	<li>Saving which online apps on this website were used or not</li>
+	<li>Saving preferences</li>
 	<li>And more...</li>
 	</ul>
 	We do not use cookies for any tracking nor do we collect any peronsally identifiable data. There should not be any third-party tracking cookies.
@@ -100,6 +129,7 @@ function CookieBanner() {
 		font-size: clamp(10px, min(1.5vw, 1.5vh), 15px);
 	`;
 	buttonUnderstand.addEventListener("click", (event) => {
+		CookieWrite("cookiebanner", 1);
 		document.getElementById("cookies").remove();
 		//unblur
 		document.getElementById("bodywrapper").style = "";
@@ -115,12 +145,12 @@ function CookieBanner() {
 //Dropdown buttons
 
 function DropdownSetToIdle(element) {
+	element.MartinWebInternalIsClicked = false;
 	//button change
 	btnElement = element.getElementsByTagName("button")[0];
 	btnElement.style = "background-color: #ffffff; color: #00007d;";
-	btnElement.MartinWebInternalIsClicked = false;
 	//img change
-	imgElement = btnElement.getElementsByClassName("headerdroparrow")[0];
+	imgElement = btnElement.getElementsByClassName("headerimage")[0];
 	imgElement.src = "assets/icons/dropdownB.png";
 	imgElement.style = "transform: scaleY(1);";
 	//make menu invisible
@@ -128,12 +158,12 @@ function DropdownSetToIdle(element) {
 	conElement.style = "display: none;";
 }
 function DropdownSetToActive(element) {
+	element.MartinWebInternalIsClicked = true;
 	//button change
 	btnElement = element.getElementsByTagName("button")[0];
 	btnElement.style = "background-color: #00007d; color: #ffffff;";
-	btnElement.MartinWebInternalIsClicked = true;
 	//img change
-	imgElement = btnElement.getElementsByClassName("headerdroparrow")[0];
+	imgElement = btnElement.getElementsByClassName("headerimage")[0];
 	imgElement.src = "assets/icons/dropdownW.png";
 	imgElement.style = "transform: scaleY(-1);";
 	//make menu visible
@@ -142,24 +172,43 @@ function DropdownSetToActive(element) {
 }
 
 function DropdownInit(id) {
-	console.log(id);
 	elementToSetup = document.getElementById(id);
-	console.log(elementToSetup);
-
 	//internal added field
 	elementToSetup.MartinWebInternalIsClicked = false;
 	
+	elementToSetup.addEventListener("click", (event) => {
+		if(event.currentTarget.MartinWebInternalIsClicked == false) {
+			//close all others
+			dropdowns = document.querySelectorAll(".headerdrop");
+			if(dropdowns.length != 0) {
+				for(let i = 0; i < dropdowns.length; i++) {
+					DropdownSetToIdle(dropdowns[i]);
+				}
+			}
+			//open ours
+			DropdownSetToActive(event.currentTarget);
+		}
+		else {
+			//close ours
+			DropdownSetToIdle(event.currentTarget);
+		}
+	});
 	elementToSetup.addEventListener("mouseenter", (event) => {
-		DropdownSetToActive(event.target);
+		DropdownSetToActive(event.currentTarget);
 	});
 	elementToSetup.addEventListener("mouseleave", (event) => {
-		DropdownSetToIdle(event.target);
+		DropdownSetToIdle(event.currentTarget);
 	});
+}
+
+//Menus
+
+function Settings() {
 	
-	elementToSetup.addEventListener("click", (event) => {
-		console.log(event.target);
-		elementToSetup.MartinWebInternalIsClicked = false;
-	}, true);
+}
+
+function PrivacyPolicy() {
+	
 }
 
 //Init
@@ -168,11 +217,13 @@ function InitWebpage() {
 	//check for Internet Explorer
 	if(DetectIE()) { return; }
 	//populate variable fields
+	copyrightyearfields = document.querySelectorAll(".copyrightyear");
+	for(let i = 0; i < copyrightyearfields.length; i++) {
+		copyrightyearfields[i].innerHTML = CopyrightYear;
+	}
 	webversionfields = document.querySelectorAll(".websiteversion");
-	if(webversionfields.length != 0) {
-		for(let i = 0; i < webversionfields.length; i++) {
-			webversionfields[i].innerHTML = WebsiteVersion;
-		}
+	for(let i = 0; i < webversionfields.length; i++) {
+		webversionfields[i].innerHTML = WebsiteVersion;
 	}
 	//setup dropdowns
 	dropdowns = document.querySelectorAll(".headerdrop");

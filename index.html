@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
 		<meta charset="UTF-8">	
@@ -14,46 +13,47 @@
 		<script src="system/mainHandler.js"></script>
 	</head>
 	<body onload="InitWebpage()">
+		<div id="header" role="heading" aria-level="1">
+			<h id="headermaintext">MartinWeb</h>
+			<button onclick="window.location.href='index.html'" disabled>
+				Homepage
+			</button>
+			<span class="headerdrop" id="productdropdown" role="button">
+				<button>
+					Products
+					<img class="headerimage" src="assets/icons/dropdownB.png">
+				</button>
+				<div class="headerdropc">
+					<button onclick="window.location.href='products.html'" role="button">All</button>
+					<button onclick="window.location.href='products/versaillesengine.html'" role="button">VersaillesEngine</button>
+					<button onclick="window.location.href='onlineapps.html'" role="button">Online Apps</button>
+				</div>
+			</span>
+			<span class="headerdrop" id="contactdropdown" role="button">
+				<button>
+					Contact
+					<img class="headerimage" src="assets/icons/dropdownB.png">
+				</button>
+				<div class="headerdropc">
+					<button onclick="window.location.href='contact.html'" role="button">Get in touch</button>
+					<button onclick="window.location.href='bugreport.html'" role="button">Bugs and issues</button>
+				</div>
+			</span> 
+			<span class="headerdrop" id="optionsdropdown" role="button">
+				<button>
+					Options
+					<img class="headerimage" src="assets/icons/dropdownB.png">
+				</button>
+				<div class="headerdropc">
+					<button onclick="window.location.href='settings.html'" role="button">Settings</button>
+					<button onclick="window.location.href='legal.html'" role="button">Legal</button>
+					<button onclick="window.location.href='cookies.html'" role="button">Cookies</button>
+					<button onclick="window.location.href='about.html'" role="button">About</button>
+				</div>
+			</span>
+		</div>
 		<div id="bodywrapper">
-			<div id="header">
-				<h id="headermaintext">MartinWeb</h>
-				<button onclick="window.location.href='index.html'" disabled>Homepage</button>
-				<span class="headerdrop" id="productdropdown">
-					<button>
-						Products
-						<img class="headerdroparrow" src="assets/icons/dropdownB.png">
-					</button>
-					<div class="headerdropc">
-						<button onclick="window.location.href='products.html'">Main</button>
-						<button onclick="console.log('Versailles');">VersaillesEngine</button>
-						<button onclick="console.log('Online Apps');">Online Apps</button>
-					</div>
-				</span>
-				<span class="headerdrop" id="contactdropdown">
-					<button>
-						Contact
-						<img class="headerdroparrow" src="assets/icons/dropdownB.png">
-					</button>
-					<div class="headerdropc">
-						<button onclick="window.location.href='contact.html'">Just get in touch</button>
-						<button onclick="window.location.href='contact.html'">Bugs and issues</button>
-						<button onclick="window.location.href='contact.html'">Business</button>
-					</div>
-				</span> 
-				<span class="headerdrop" id="optionsdropdown">
-					<button>
-						Options
-						<img class="headerdroparrow" src="assets/icons/dropdownB.png">
-					</button>
-					<div class="headerdropc">
-						<button onclick="console.log('Settings');">Settings</button>
-						<button onclick="console.log('Privacy policy');">Privacy policy</button>
-						<button onclick="console.log('Cookies');">Cookies</button>
-						<button onclick="window.location.href='about.html'">About</button>
-					</div>
-				</span> 
-			</div>
-			<div class="blogpost">
+			<div class="blogpost" role="article">
 				<h>Refresh of the website</h>
 				<p>
 				I am currently in the process of refreshing the look of the website to the one currently seen here. 
@@ -72,15 +72,15 @@
 					<li>Make it more fitting</li>
 					<li>Add some new UI themes and also finally add some JS</li>
 				</ul>
-				Here is a button taking you to the old main page (warning: it will get removed in the future!):<br>
-				<button style="background-color:orange;color:white;" onclick="window.location.href='oldindex.html'">OLD LOOK</button><br>
-				<i>I am sorry for any inconvieniences caused (if there are any...)<br>-MegapolisPlayer/Martin</i>
 				</p>
-				<p class="blogtext" id="warning">
-				This really is a work in progress! This may (and probably will) change. The old site will disappear only when the new one is in a completely finished state.<br>
+				<p class="info">
+				All of the features of the old website have been migrated so the old website has been removed and archived.<br>
+				</p>
+				<p class="warning">
+				This really is a work in progress! This may (and probably will) change.<br>
 				</p>
 			</div>
-			<div class="blogpost">
+			<div class="blogpost" role="article">
 				<h>Welcome!</h>
 				<p>
 				Welcome to my personal and newly redesigned website! Here you can see all of my achievements and (sometimes) failures.<br>
@@ -90,12 +90,12 @@
 		<div id="credits">
 			<span id="creditsleft">
 				<br>
-				(c) MegapolisPlayer, 2022-2023<br>All rights reserved<br>Website version <span class="websiteversion"></span><br>
+				(c) Martin/MegapolisPlayer, <span class="copyrightyear"></span><br>All rights reserved<br>Website version <span class="websiteversion"></span><br>
 			</span>
 			<span id="creditsright">
 				<br>
 				Do not copy without permission.<br>
-				This is a work in progress, if you spot any bugs please report them to megapolispl@outlook.com!<br>
+				If you spot any bugs, please report them to megapolispl@outlook.com!<br>
 			</span>
 		</div>
 	</body>

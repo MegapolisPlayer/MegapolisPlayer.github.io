@@ -1,46 +1,81 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
 		<meta charset="UTF-8">	
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-		<meta name="description" content="About Martin/MegapolisPlayer">
-		<meta name="keywords" content="Martin, MegapolisPlayer, C++, coding, personal website, website, mplayer, about, information, stuff, history">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="Martin, MegapolisPlayer, C++, coding, personal website, website, mplayer, about, information, stuff, history, information">
 		<meta name="author" content="Martin/MegapolisPlayer">
 
-		<title>Martin's Website - About</title>
-		<link rel="stylesheet" href="system/main.css">
-		<link rel="icon" type="image/x-icon" href="assets/PersonalWebsite.png">
+		<title>MartinWeb | About</title>
+		<link rel="stylesheet" href="system/mainStylesheet.css">
+		<link rel="icon" type="image/x-icon" href="assets/icons/favicon.png">
+		<script src="system/mainHandler.js"></script>
 	</head>
-	<body>
-		<div id="header">Martin's Personal Website - About</div>
-		<div id="sidebar">
-			<h2>Menu</h2><br>
-			<button onclick="window.location.href='index.html'">Main Menu</button><br>
-			<button onclick="window.location.href='products.html'">Products</button><br>
-			<button onclick="window.location.href='about.html'">About</button><br>
-			<button onclick="window.location.href='contact.html'">Contact</button><br>
+	<body onload="InitWebpage()">
+		<div id="header" role="heading" aria-level="1">
+			<h id="headermaintext">MartinWeb</h>
+			<button onclick="window.location.href='index.html'">
+				Homepage
+			</button>
+			<span class="headerdrop" id="productdropdown" role="button">
+				<button>
+					Products
+					<img class="headerimage" src="assets/icons/dropdownB.png">
+				</button>
+				<div class="headerdropc">
+					<button onclick="window.location.href='products.html'" role="button">All</button>
+					<button onclick="window.location.href='products/versaillesengine.html'" role="button">VersaillesEngine</button>
+					<button onclick="window.location.href='onlineapps.html'" role="button">Online Apps</button>
+				</div>
+			</span>
+			<span class="headerdrop" id="contactdropdown" role="button">
+				<button>
+					Contact
+					<img class="headerimage" src="assets/icons/dropdownB.png">
+				</button>
+				<div class="headerdropc">
+					<button onclick="window.location.href='contact.html'" role="button">Get in touch</button>
+					<button onclick="window.location.href='bugreport.html'" role="button">Bugs and issues</button>
+				</div>
+			</span> 
+			<span class="headerdrop" id="optionsdropdown" role="button">
+				<button>
+					Options
+					<img class="headerimage" src="assets/icons/dropdownB.png">
+				</button>
+				<div class="headerdropc">
+					<button onclick="window.location.href='settings.html'" role="button">Settings</button>
+					<button onclick="window.location.href='legal.html'" role="button">Legal</button>
+					<button onclick="window.location.href='cookies.html'" role="button">Cookies</button>
+					<button onclick="window.location.href='about.html'" role="button" disabled>About</button>
+				</div>
+			</span>
 		</div>
-		<div class="blogpost">
-			<h2>About Me</h2>
-			<p>
-        			I'm a student who <b>REALLY</b> likes C and C++. These languages give you a lot of control to make the application look and feel <b>EXACTLY</b> as you want.
-        			And it also doesn't force you to use OOP (like Java or C#) which is, in my opinion, quite a nice feature.<br>
-				I think Bjarne Stroustrup (the orignal creator of C++) puts it best: 
-				<q>C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your entire leg off.</q><br>
-                		I can personally confirm that statement.<br>
-			</p>
+		<div id="bodywrapper">
+			<div class="blogpost" role="article">
+				<h>About me</h>
+				<p>
+				Hi! I'm a student with some free time on my hands! I usually use C/C++, but sometimes I do stuff in 
+				other language (such as JavaScript or Python). I have a quite a few projects on my hands right now - more information can be found on my <a href="https://www.github.com/MegapolisPlayer">GitHub user profile</a> or the Products page.
+				</p>
+			</div>
+			<div class="blogpost" role="article">
+				<h>About the website</h>
+				<p>
+				(c) Martin/MegapolisPlayer, <span class="copyrightyear"></span><br>Website version <span class="websiteversion"></span><br>
+				</p>
+			</div>
 		</div>
-		<div class="blogpost">
-			<h2>My <i>Magna opera (=latin for "greatest works")</i></h2>
-			<p>
-				<ul>
-					<li>MuffleSpeech - a string changer - put on hold (I do want make a GUI for it at some point), but still <b>REALLY</b> fun to use</li>
-					<li>VersaillesEngine - a closed-source cross-platform GUI framework with over 3900 lines of code</li>
-					<li>ComInPlat - a common interpreter platform for custom languages (something like LLVM, but worse and for interpreters)</li>
-				</ul>
-			</p>
+		<div id="credits">
+			<span id="creditsleft">
+				<br>
+				(c) Martin/MegapolisPlayer, <span class="copyrightyear"></span><br>All rights reserved<br>Website version <span class="websiteversion"></span><br>
+			</span>
+			<span id="creditsright">
+				<br>
+				Do not copy without permission.<br>
+				If you spot any bugs, please report them to megapolispl@outlook.com!<br>
+			</span>
 		</div>
-		<div id="credits">(c) MegapolisPlayer, 2022-2023</div>
 	</body>
 </html>
