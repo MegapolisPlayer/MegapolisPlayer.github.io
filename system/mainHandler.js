@@ -151,7 +151,7 @@ function DropdownSetToIdle(element) {
 	btnElement.style = "background-color: #ffffff; color: #00007d;";
 	//img change
 	imgElement = btnElement.getElementsByClassName("headerimage")[0];
-	imgElement.src = "assets/icons/dropdownB.png";
+	imgElement.src = "/assets/icons/dropdownB.png";
 	imgElement.style = "transform: scaleY(1);";
 	//make menu invisible
 	conElement = element.getElementsByClassName("headerdropc")[0];
@@ -164,7 +164,7 @@ function DropdownSetToActive(element) {
 	btnElement.style = "background-color: #00007d; color: #ffffff;";
 	//img change
 	imgElement = btnElement.getElementsByClassName("headerimage")[0];
-	imgElement.src = "assets/icons/dropdownW.png";
+	imgElement.src = "/assets/icons/dropdownW.png";
 	imgElement.style = "transform: scaleY(-1);";
 	//make menu visible
 	conElement = element.getElementsByClassName("headerdropc")[0];
@@ -180,8 +180,8 @@ function DropdownInit(id) {
 		if(event.currentTarget.MartinWebInternalIsClicked == false) {
 			//close all others
 			dropdowns = document.querySelectorAll(".headerdrop");
-			if(dropdowns.length != 0) {
-				for(let i = 0; i < dropdowns.length; i++) {
+			for(let i = 0; i < dropdowns.length; i++) {
+				if(dropdowns[i] != event.currentTarget) {
 					DropdownSetToIdle(dropdowns[i]);
 				}
 			}
