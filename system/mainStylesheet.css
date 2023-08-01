@@ -175,7 +175,6 @@ li ul {
 	text-align: center;
 }
 .headerdropc button {
-	display: absolute;
 	font-size: clamp(10px, 1.5vw, 20px);
 	font-weight: bold;
 	text-align: center;

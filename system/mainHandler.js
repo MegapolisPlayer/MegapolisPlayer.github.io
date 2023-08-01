@@ -183,7 +183,9 @@ function DropdownInit(id) {
 	elementToSetup.MartinWebInternalIsClicked = false;
 	
 	//mobile
-	elementToSetup.addEventListener("click", (event) => {
+	elementToSetup.addEventListener("touchend", (event) => {
+		event.stopPropagation();
+		event.preventDefault();
 		if(event.currentTarget.MartinWebInternalIsClicked == false) {
 			//close all others
 			dropdowns = document.querySelectorAll(".headerdrop");
@@ -225,6 +227,11 @@ function PrivacyPolicy() {
 function InitWebpage() {
 	//check for Internet Explorer
 	if(DetectIE()) { return; }
+	//init buttons
+	buttons = document.getElementsByTagName("button");
+	for(let i = 0; i < buttons.length; i++) {
+		buttons[i].setAttribute("ontouchend", buttons[i].getAttribute("onclick"));
+	}
 	//populate variable fields
 	copyrightyearfields = document.querySelectorAll(".copyrightyear");
 	for(let i = 0; i < copyrightyearfields.length; i++) {
