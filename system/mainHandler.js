@@ -4,7 +4,7 @@
 let WebsiteVersion = "23.1.0.1";
 //YEAR 23 UPDATE 1 VERSION 0 (INDEV) PATCH 1
 
-let WebsiteURL =  new URL(window.location.href);
+let WebsiteURL = new URL(window.location.href);
 
 let CopyrightYear = "2022-2023";
 
@@ -53,6 +53,12 @@ function DetectIE() {
 		return true;
 	}
 	return false;
+}
+
+function AddMultipleEventListeners(element, eventsArray, func) {
+	for(let i = 0; i < eventsArray.length; i++) {
+		element.addEventListener(eventsArray[i], func);
+	}
 }
 
 //Cookie framework
@@ -176,6 +182,7 @@ function DropdownInit(id) {
 	//internal added field
 	elementToSetup.MartinWebInternalIsClicked = false;
 	
+	//mobile
 	elementToSetup.addEventListener("click", (event) => {
 		if(event.currentTarget.MartinWebInternalIsClicked == false) {
 			//close all others
@@ -193,6 +200,8 @@ function DropdownInit(id) {
 			DropdownSetToIdle(event.currentTarget);
 		}
 	});
+
+	//desktop
 	elementToSetup.addEventListener("mouseenter", (event) => {
 		DropdownSetToActive(event.currentTarget);
 	});

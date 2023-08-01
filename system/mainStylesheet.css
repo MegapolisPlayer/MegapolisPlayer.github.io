@@ -78,9 +78,32 @@ button:disabled {
 	color: #ffffff;
 }
 
+.downloadrow {
+	width: 100%;
+	text-align: center;
+}
+.downloadrow button {
+	display: inline;
+	font-family: 'Open Sans';
+	font-size: clamp(10px, 1.5vw, 20px);
+	font-weight: bold;
+	text-align: center;
+	background-color: #ffffff;
+	color: #00007d;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0;
+	border: none;
+}
+
 h {
 	font-weight: bold;
 	font-size: clamp(15px, 2vw, 35px);
+}
+h2 {
+	font-weight: bold;
 }
 
 q {
@@ -230,6 +253,24 @@ li ul {
 	margin-left: 10px;
 	margin-right: 10px;
 	display: flex;
+}
+
+.column2 {
+	float: left;
+	width: 50%;
+}
+.column3 {
+	float: left;
+	width: 33.33333%;
+}
+.column4 {
+	float: left;
+	width: 25%;
+}
+.columnparent:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*Credits*/
