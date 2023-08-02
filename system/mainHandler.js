@@ -118,7 +118,7 @@ function CookieBanner() {
 	<li>Saving preferences</li>
 	<li>And more...</li>
 	</ul>
-	We do not use cookies for any tracking nor do we collect any peronsally identifiable data. There should not be any third-party tracking cookies.
+	We do not use cookies for any tracking nor do we collect any peronsally identifiable data. Only necessary third-party cookies are loaded.
 	`;
 	mainText.style = `
 		padding-left: clamp(2px, 0.2vw, 5px); margin: 0;

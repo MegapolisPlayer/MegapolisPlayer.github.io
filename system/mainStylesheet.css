@@ -51,6 +51,19 @@ a:active {
 	color: #000000;
 }
 
+#credits a:link {
+	color: #2020aa;
+}
+#credits a:visited {
+	color: #8020aa;
+}
+#credits a:hover {
+	color: #20aaaa;
+}
+#credits a:active {
+	color: #ffffff;
+}
+
 button {
 	display: inline;
 	font-family: 'Open Sans';
@@ -76,6 +89,29 @@ button:active {
 button:disabled {
 	background-color: #00007d;
 	color: #ffffff;
+}
+
+textarea {
+	font-family: 'Open Sans', sans-serif;
+	font-size: clamp(10px, 1.5vw, 20px);
+}
+input {
+	font-family: 'Open Sans', sans-serif;
+	font-size: clamp(10px, 1.5vw, 20px);
+}
+input[type=checkbox] {
+	width: clamp(10px, 1.5vw, 20px);
+	height: clamp(10px, 1.5vw, 20px);
+}
+select {
+	display: inline;
+	font-weight: bold;
+	text-align: center;
+	background-color: #ffffff;
+	color: #00007d;
+	padding: 10px;
+	margin: 0;
+	border: none;
 }
 
 .downloadrow {
@@ -104,6 +140,7 @@ h {
 }
 h2 {
 	font-weight: bold;
+	margin: 0;
 }
 
 q {
@@ -126,6 +163,10 @@ ul {
 }
 li ul {
 	list-style-type: square;
+}
+
+.fullwidth {
+	width: 100%;
 }
 
 /*Header stuff*/
@@ -195,6 +236,30 @@ li ul {
 .headerdropc button:disabled {
 	background-color: #00007d;
 	color: #ffffff;
+}
+
+/*Grid selection*/
+
+.gridcontain {
+	display: grid;
+	grid-template-columns: repeat(3, 3fr);
+	grid-column-gap: clamp(5px, 0.5vw, 10px);
+	grid-row-gap: clamp(5px, 0.5vw, 10px);
+	margin: 10px;
+}
+.gridmember {
+	display: grid;
+	background-color: #ffffff;
+	color: #00007d;
+	border: none;
+	min-height: 30vh;
+	padding: 10px;
+}
+.gridmemberbutton {
+	bottom: 0;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 0px;
 }
 
 /*Divs*/

@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="/system/mainStylesheet.css">
 		<link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png">
 		<script src="/system/mainHandler.js"></script>
+		<script src="https://web3forms.com/client/script.js" async defer></script>
 	</head>
 	<body onload="InitWebpage()">
 		<div id="header" role="heading" aria-level="1">
@@ -44,7 +45,6 @@
 					<img class="headerimage" src="/assets/icons/dropdownB.png">
 				</button>
 				<div class="headerdropc">
-					<button onclick="window.location.href='/settings.html'" role="button">Settings</button>
 					<button onclick="window.location.href='/legal.html'" role="button">Legal</button>
 					<button onclick="window.location.href='/cookies.html'" role="button">Cookies</button>
 					<button onclick="window.location.href='/about.html'" role="button">About</button>
@@ -55,7 +55,31 @@
 			<div class="blogpost" role="article">
 				<h>Bug reporting</h>
 				<p>
-				TBD<br>
+					<form action="https://api.web3forms.com/submit" method="POST">
+						<input type="hidden" name="email" value="martinwebmgr@outlook.com">
+						<input type="hidden" name="access_key" value="78f7055d-80c9-4378-bb5d-c8cf5be759d6">
+						<input type="hidden" name="subject" value="MegapolisPlayer.github.io: New Message">
+						<input type="hidden" name="redirect" value="https://megapolisplayer.github.io/bugreport.html">
+						<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+						
+						Message body (required)<br>
+						<textarea class="fullwidth" name="message" rows="5" placeholder="Describe the issue..." required></textarea><br>
+						Select reason (required)<br>
+						<select name="reason" required>
+							<option value="bug">Bug Report</option>
+							<option value="feature">Feature Request</option>
+							<option value="question">Question</option>
+							<option value="other">Other</option>
+						</select><br>
+						Your e-mail so we can reach out to you (optional)<br>
+						<input class="fullwidth" type="text" name="customer mail" rows="1" placeholder="yourmail@optional.com"><br>
+						Captcha (required)<br>
+						<div class="h-captcha" data-captcha="true"></div>
+						<input type="checkbox" name="agreement" value="yes" required>
+						<label for="agreement">I hereby agree that this message, my email adress (if provided) and my user agent will be sent to the administrators of the website.</label><br><br>
+						<button type="submit">Send</button>
+					</form><br>
+					If you need a customizable HTML form similar to this one, then check out <a href="https://web3forms.com/">Web3Forms</a>!
 				</p>
 			</div>
 		</div>
@@ -67,7 +91,7 @@
 			<span id="creditsright">
 				<br>
 				Do not copy without permission.<br>
-				If you spot any bugs, please report them to megapolispl@outlook.com!<br>
+				If you spot any bugs, please report them <a href="/bugreport.html">here.</a><br>
 			</span>
 		</div>
 	</body>
