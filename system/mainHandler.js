@@ -235,6 +235,11 @@ function InitWebpage() {
 	for(let i = 0; i < useragentfields.length; i++) {
 		useragentfields[i].innerHTML = window.navigator.userAgent;
 	}
+	//automatic input
+	useragentinputfields = document.querySelectorAll(".input_useragent");
+	for(let i = 0; i < useragentinputfields.length; i++) {
+		useragentinputfields[i].setAttribute("value", window.navigator.userAgent);
+	}
 	//setup dropdowns
 	dropdowns = document.querySelectorAll(".headerdrop");
 	if(dropdowns.length != 0) {
