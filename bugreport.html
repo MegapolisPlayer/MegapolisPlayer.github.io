@@ -56,11 +56,13 @@
 				<h>Bug reporting</h>
 				<p>
 					<form action="https://api.web3forms.com/submit" method="POST">
-						<input type="hidden" name="email" value="martinwebmgr@outlook.com">
-						<input type="hidden" name="access_key" value="78f7055d-80c9-4378-bb5d-c8cf5be759d6">
-						<input type="hidden" name="subject" value="MegapolisPlayer.github.io: New Message">
+						<input type="hidden" name="email" value="martinwebmgr@outlook.com" required>
+						<input type="hidden" name="access_key" value="78f7055d-80c9-4378-bb5d-c8cf5be759d6" required>
+						<input type="hidden" name="subject" value="MegapolisPlayer.github.io: New Message" required>
 						<input type="hidden" name="redirect" value="https://megapolisplayer.github.io/bugreport.html">
 						<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+						
+						<input class="hidden input_useragent" name="user agent" value="" required>
 						
 						Message body (required)<br>
 						<textarea class="fullwidth" name="message" rows="5" placeholder="Describe the issue..." required></textarea><br>
@@ -90,7 +92,7 @@
 			</span>
 			<span id="creditsright">
 				<br>
-				Do not copy without permission.<br>
+				<a property="dct:title" rel="cc:attributionURL" href="https://megapolisplayer.github.io/">MartinWeb website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://megapolisplayer.github.io/contact">Martin/MegapolisPlayer</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0</a><br>
 				If you spot any bugs, please report them <a href="/bugreport.html">here.</a><br>
 			</span>
 		</div>

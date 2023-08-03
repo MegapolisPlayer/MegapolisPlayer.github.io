@@ -212,16 +212,6 @@ function DropdownInit(id) {
 	});
 }
 
-//Menus
-
-function Settings() {
-	
-}
-
-function PrivacyPolicy() {
-	
-}
-
 //Init
 
 function InitWebpage() {
@@ -240,6 +230,10 @@ function InitWebpage() {
 	webversionfields = document.querySelectorAll(".websiteversion");
 	for(let i = 0; i < webversionfields.length; i++) {
 		webversionfields[i].innerHTML = WebsiteVersion;
+	}
+	useragentfields = document.querySelectorAll(".useragent");
+	for(let i = 0; i < useragentfields.length; i++) {
+		useragentfields[i].innerHTML = window.navigator.userAgent;
 	}
 	//setup dropdowns
 	dropdowns = document.querySelectorAll(".headerdrop");

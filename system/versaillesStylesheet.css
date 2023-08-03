@@ -33,6 +33,10 @@ body {
 	overflow-x: hidden; /*for mobile*/
 	min-height: 80vh;
 }
+#bodywrapper *::selection {
+	color: #ffffff;
+	background-color: #222222;
+}
 
 .downloadrow button {
 	background-color: #ffffff;
@@ -73,4 +77,8 @@ h {
 	margin-bottom: 90vh;
 	
 	text-align: center;	
+}
+#mainpost *::selection {
+	color: #222222;
+	background-color: #ffffff;
 }
