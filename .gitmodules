@@ -1,3 +1,6 @@
 [submodule "game/escape"]
 	path = game/escape
 	url = https://github.com/MegapolisPlayer/EscapeGameJS.git
+[submodule "apps/rozvrhinfo"]
+	path = apps/rozvrhinfo
+	url = git@github.com:MegapolisPlayer/RozvrhInfo.git

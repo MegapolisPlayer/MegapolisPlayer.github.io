@@ -10,8 +10,15 @@
 		<link rel="stylesheet" href="/system/mainStylesheet.css">
 		<link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png">
 		<script src="/system/mainHandler.js"></script>
+		<script src="/system/onlineAppsGen.js"></script>
+		<script>
+			function BodyOnLoad() {
+				GenerateOnlineApps();
+				InitWebpage();
+			}
+		</script>
 	</head>
-	<body onload="InitWebpage()">
+	<body onload="BodyOnLoad()">
 		<div id="header" role="heading" aria-level="1">
 			<h id="headermaintext">MartinWeb</h>
 			<button onclick="window.location.href='/index.html'">
@@ -51,16 +58,7 @@
 			</span>
 		</div>
 		<div id="bodywrapper">
-			<div class="gridcontain">
-				<div class="gridmember">
-					<h2>Escape from the Olomouc Region</h2>
-					<p>
-					A game about escaping the Olomouc Region due to a Slovak rebellion. Includes minigames, achievements and support for multiple languages.
-					</p>
-					<button class="gridmemberbutton" onclick="window.location.href='/game/escape'">
-						Open
-					</button>
-				</div>
+			<div class="gridcontain" id="appsmenu">
 			</div>
 		</div>
 		<div id="credits">
