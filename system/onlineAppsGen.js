@@ -7,13 +7,6 @@ OnlineApps.push({
 	OnClick: "window.location.href='/game/escape'",
 });
 
-OnlineApps.push({
-	Name: "RozvrhInfo",
-	Description: "Informs when and where is the next class and sends notifications accordingly. Works only for some schools for now.",
-	Disabled: false,
-	OnClick: "window.location.href='/apps/rozvrhinfo'",
-});
-
 function GenerateOnlineApps() {
 	for(let i = 0; i < OnlineApps.length; i++) {
 		let elem = document.createElement("div");
