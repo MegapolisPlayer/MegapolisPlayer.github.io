@@ -1,8 +1,8 @@
 //Variables
 
 //YEAR.UPDATE.VERSION.PATCH
-let WebsiteVersion = "23.2.0.0";
-//YEAR 23 UPDATE 2 VERSION 0 (INDEV) PATCH 0
+let WebsiteVersion = "23.2.0.1";
+//YEAR 23 UPDATE 2 VERSION 0 (INDEV) PATCH 1
 
 let WebsiteURL = new URL(window.location.href);
 
