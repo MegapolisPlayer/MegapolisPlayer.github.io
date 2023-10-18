@@ -343,8 +343,6 @@ li ul {
 	height: 20vh;
 	padding-top: 2vh;
 	padding-bottom: 10px;
-	bottom: 0;
-	left: 0;
 	margin-top: 2vh;
 }
 #creditsleft {
@@ -353,6 +351,7 @@ li ul {
 	left: 0;
 	float:left;
 	padding-left: 50px;
+	position: absolute;
 }
 #creditsright {
 	width: calc(50vw - 50px);
@@ -360,5 +359,6 @@ li ul {
 	right: 0;
 	float:right;
 	padding-right: 50px;
+	position: absolute;
 }
 
