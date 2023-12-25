@@ -13,44 +13,6 @@
 		<script src="https://web3forms.com/client/script.js" async defer></script>
 	</head>
 	<body onload="InitWebpage()">
-		<div id="header" role="heading" aria-level="1">
-			<h id="headermaintext">MartinWeb</h>
-			<button onclick="window.location.href='/index.html'">
-				Homepage
-			</button>
-			<span class="headerdrop" id="productdropdown" role="button">
-				<button>
-					Products
-					<img class="headerimage" src="/assets/icons/dropdownB.png">
-				</button>
-				<div class="headerdropc">
-					<button onclick="window.location.href='/products.html'" role="button">All</button>
-					<button onclick="window.location.href='/products/versaillesengine.html'" role="button">VersaillesEngine</button>
-					<button onclick="window.location.href='/onlineapps.html'" role="button">Online Apps</button>
-				</div>
-			</span>
-			<span class="headerdrop" id="contactdropdown" role="button">
-				<button>
-					Contact
-					<img class="headerimage" src="/assets/icons/dropdownB.png">
-				</button>
-				<div class="headerdropc">
-					<button onclick="window.location.href='/contact.html'" role="button">Get in touch</button>
-					<button onclick="window.location.href='/bugreport.html'" role="button" disabled>Bugs and issues</button>
-				</div>
-			</span> 
-			<span class="headerdrop" id="optionsdropdown" role="button">
-				<button>
-					Options
-					<img class="headerimage" src="/assets/icons/dropdownB.png">
-				</button>
-				<div class="headerdropc">
-					<button onclick="window.location.href='/legal.html'" role="button">Legal</button>
-					<button onclick="window.location.href='/cookies.html'" role="button">Cookies</button>
-					<button onclick="window.location.href='/about.html'" role="button">About</button>
-				</div>
-			</span>
-		</div>
 		<div id="bodywrapper">
 			<div class="blogpost" role="article">
 				<h>Bug reporting</h>
@@ -80,21 +42,11 @@
 						<input type="checkbox" name="agreement" value="yes" required>
 						<label for="agreement">I hereby agree that this message, my email adress (if provided) and my user agent will be sent to the administrators of the website.</label><br><br>
 						<button type="submit">Send</button>
-					</form><br>
+					</form>
+					<br>
 					If you need a customizable HTML form similar to this one, then check out <a href="https://web3forms.com/">Web3Forms</a>!
 				</p>
 			</div>
-		</div>
-		<div id="credits">
-			<span id="creditsleft">
-				<br>
-				(c) Martin/MegapolisPlayer, <span class="copyrightyear"></span><br>All rights reserved<br>Website version <span class="websiteversion"></span><br>
-			</span>
-			<span id="creditsright">
-				<br>
-				<a property="dct:title" rel="cc:attributionURL" href="https://megapolisplayer.github.io/">MartinWeb website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://megapolisplayer.github.io/contact">Martin/MegapolisPlayer</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0</a><br>
-				If you spot any bugs, please report them <a href="/bugreport.html">here.</a><br>
-			</span>
 		</div>
 	</body>
 </html>

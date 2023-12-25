@@ -30,7 +30,12 @@ body {
 #bodywrapper {
 	width: 100%;
 	overflow-x: hidden; /*for mobile*/
-	min-height: 80vh;
+	/*100 - header btn font size - header button padding - header padding*/
+	/* - (credits size + padding top + padding bottom + margin top)*/
+	min-height: calc(
+		calc(100vh - clamp(10px, 1.5vw, 20px) - 10px - 10px) 
+		- calc(20vh + 2vh + 10px + 2vh)
+	);
 }
 
 *::selection {
@@ -158,6 +163,12 @@ li ul {
 	list-style-type: square;
 }
 
+table, tr, td, th {
+	border: 1px solid #ffffff;
+	padding: 5px;
+	border-collapse: collapse;
+}
+
 .fullwidth {
 	width: 100%;
 }
@@ -261,6 +272,8 @@ li ul {
 
 /*Divs*/
 
+/*Outside blogpost*/
+
 .blogpost {
 	background-color: #808080;
 	height: 5%;
@@ -270,6 +283,78 @@ li ul {
 	margin-right: 5%; 
 	margin-top: 2%;
 }
+
+/*Selection*/
+
+.blogpostsectionmenu {
+	background-color: #ffffff;
+	color: #00007d;
+	border: 5px solid #ffffff;
+	padding: clamp(10px, 10px, 30px);
+	margin-left: 5%;
+	margin-right: 5%; 
+	margin-top: 2%;
+	display: flex;
+	align-items: center;
+}
+
+.blogpostsectionmenu button {
+	background-color: #ffffff;
+	color: #00007d;
+	padding: 5px;
+	display: inline-block;
+	right: 0;
+}
+.blogpostsectionmenu button:hover {
+	background-color: #00007d;
+	color: #ffffff;
+}
+
+@media only screen and (max-width: 499px) {
+	.blogpostsectionmenutext {
+		display: none;
+	}
+}
+
+/*Blogposts*/
+
+.bloginfo {
+	background-color: #008000;
+	color: #ffffff;
+	border-left: clamp(10px, 0.5vw, 20px) solid #00aa00;
+	height: 5%;
+	padding: clamp(10px, 1.25vw, 30px); /*for text*/
+	margin-left: 5%;
+	margin-right: 5%; 
+	margin-top: 2%;
+	display: flex;
+}
+
+.blogwarning {
+	background-color: #cc6600;
+	color: #ffffff;
+	border-left: clamp(10px, 0.5vw, 20px) solid #ff9900;
+	height: 5%;
+	padding: clamp(10px, 1.25vw, 30px); /*for text*/
+	margin-left: 5%;
+	margin-right: 5%; 
+	margin-top: 2%;
+	display: flex;
+}
+
+.blogerror {
+	background-color: #800000;
+	color: #ffffff;
+	border-left: clamp(10px, 0.5vw, 20px) solid #aa0000;
+	height: 5%;
+	padding: clamp(10px, 1.25vw, 30px); /*for text*/
+	margin-left: 5%;
+	margin-right: 5%; 
+	margin-top: 2%;
+	display: flex;
+}
+
+/*Inside blogpost*/
 
 .info {
 	background-color: #008000;
@@ -332,6 +417,23 @@ li ul {
   content: "";
   display: table;
   clear: both;
+}
+
+.yes {
+	color: #008000;
+	font-weight: bold;
+}
+.maybe {
+	color: #cccc00; /*different color than warning*/
+	font-weight: bold;
+}
+.notreally {
+	color: #cc6600; /*warning in bp color*/
+	font-weight: bold;
+}
+.no {
+	color: #800000;
+	font-weight: bold;
 }
 
 /*Credits*/

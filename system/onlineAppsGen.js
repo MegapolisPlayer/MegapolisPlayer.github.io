@@ -1,3 +1,5 @@
+//Variables
+
 let OnlineApps = new Array();
 
 OnlineApps.push({
@@ -6,6 +8,8 @@ OnlineApps.push({
 	Disabled: false,
 	OnClick: "window.location.href='/game/escape'",
 });
+
+//Functions
 
 function GenerateOnlineApps() {
 	for(let i = 0; i < OnlineApps.length; i++) {

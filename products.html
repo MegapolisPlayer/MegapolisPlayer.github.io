@@ -12,45 +12,11 @@
 		<script src="/system/mainHandler.js"></script>
 	</head>
 	<body onload="InitWebpage()">
-		<div id="header" role="heading" aria-level="1">
-			<h id="headermaintext">MartinWeb</h>
-			<button onclick="window.location.href='index.html'">
-				Homepage
-			</button>
-			<span class="headerdrop" id="productdropdown" role="button">
-				<button>
-					Products
-					<img class="headerimage" src="/assets/icons/dropdownB.png">
-				</button>
-				<div class="headerdropc">
-					<button onclick="window.location.href='products.html'" role="button" disabled>All</button>
-					<button onclick="window.location.href='products/versaillesengine.html'" role="button">VersaillesEngine</button>
-					<button onclick="window.location.href='onlineapps.html'" role="button">Online Apps</button>
-				</div>
-			</span>
-			<span class="headerdrop" id="contactdropdown" role="button">
-				<button>
-					Contact
-					<img class="headerimage" src="/assets/icons/dropdownB.png">
-				</button>
-				<div class="headerdropc">
-					<button onclick="window.location.href='contact.html'" role="button">Get in touch</button>
-					<button onclick="window.location.href='bugreport.html'" role="button">Bugs and issues</button>
-				</div>
-			</span> 
-			<span class="headerdrop" id="optionsdropdown" role="button">
-				<button>
-					Options
-					<img class="headerimage" src="/assets/icons/dropdownB.png">
-				</button>
-				<div class="headerdropc">
-					<button onclick="window.location.href='legal.html'" role="button">Legal</button>
-					<button onclick="window.location.href='cookies.html'" role="button">Cookies</button>
-					<button onclick="window.location.href='about.html'" role="button">About</button>
-				</div>
-			</span>
-		</div>
 		<div id="bodywrapper">
+			<div class="bloginfo" role="article">
+				Note that not all projects may be listed here.<br>
+				Some commercial, insignificant and/or useless projects are omitted.<br>
+			</div>
 			<div class="blogpost" role="article">
 				<h>List of my products</h>
 				<p>
@@ -61,50 +27,63 @@
 			<div class="blogpost" role="article">
 				<h>Online apps</h>
 				<p>
-					<ul>
-						<li>
-							<a href="https://github.com/MegapolisPlayer/EscapeGameJS">EscapeGameJS (Escape from the Olomouc Region) - a school project game, available on this website. (Products > Online Apps menu)</a><br>
-							Developed with <a href="https://github.com/KohoutGD">@KohoutGD</a><br>
-							<a href="/game/escape">Click here to play the game.</a><br>
-						</li>
-						<li>
-							<a href="https://github.com/MegapolisPlayer/RozvrhInfo">RozvrhInfo - a project for getting the schedule of your class, available on this website. (Products > Online Apps menu)</a><br>
-							<a href="/apps/rozvrhinfo">Click here to use the program.</a><br>
-						</li>
-					</ul>
+					Check <a href="onlineapps.html">this</a> page instead.<br><i>Or, just use the dropdown menu (Products -> Online Apps)</i>
 				</p>
 			</div>
 			<div class="blogpost" role="article">
-				<h>Old, unsupported or test projects</h>
+				<h>Major projects</h>
 				<p>
-					<ul>
-						<li><a href="https://github.com/MegapolisPlayer/MinisterOS">MinisterOS - a small test "OS" (bootloader with some C++ code and a shell script)</a></li>
-						<li><a href="https://github.com/MegapolisPlayer/MuffleSpeech">MuffleSpeech - a character changer with a fancy shell</a></li>
-						<li><a href="https://github.com/MegapolisPlayer/SimpleUEFI">SimpleUEFI - a "simple" UEFI x64 boot example</a></li>
-					</ul>
+					<b>Projects which are open-source and have some relevance.</b> <i>(so no private ones)</i><br>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Description</th>
+							<th>Is supported?</th>
+						</tr>
+						<tr>
+							<td><a href="https://github.com/MegapolisPlayer/MuffleSpeech">MuffleSpeech</a></td>
+							<td>a character changer with a fancy shell</td>
+							<td><span class="no">No</span></td>
+						</tr>
+					</table>
 				</p>
 			</div>
 			<div class="blogpost" role="article">
-				<h>Current or supported projects</h>
+				<h>Minor projects</h>
 				<p>
-					<ul>
-						<li><a href="https://github.com/MegapolisPlayer/MCServerStatusBot">MCServerStatusBot - a discord bot which gets the status of a Minecraft server</a></li>
-						<li><a href="/products/versaillesengine">VersaillesEngine - an extensive 2D C++ framework for applications and games</a></li>
-						<li>There are more currently in development but which aren't ready for a demo version yet.</li>
-					</ul>
+					<b>
+						Projects have some relevance and may be useful to some people.<br>
+						These projects are smaller in scope and are usually small applications or testing scripts.<br>
+					</b><br>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Description</th>
+							<th>Is supported?</th>
+						</tr>
+						<tr>
+							<td><a href="https://github.com/MegapolisPlayer/MCServerStatusBot">MCServerStatusBot</a></td>	
+							<td>Discord bot which gets the status of a Minecraft server.</td>	
+							<td><span class="maybe">Bugfixes only</span></td>	
+						</tr>
+						<tr>
+							<td><a href="https://github.com/MegapolisPlayer/MinisterOS">MinisterOS</a></td>	
+							<td>A small test "OS". (x86 assembly bootloader with some C++ code and a shell script)</td>	
+							<td><span class="no">No</span></td>	
+						</tr>
+						<tr>
+							<td><a href="https://github.com/MegapolisPlayer/SimpleUEFI">SimpleUEFI</a></td>	
+							<td>A "simple" UEFI x64 boot example written in pure C (with the UEFI headers)</td>	
+							<td><span class="no">No</span></td>	
+						</tr>
+						<tr>
+							<td><a href="https://github.com/MegapolisPlayer/MuffleSpeech">MuffleSpeech</a></td>	
+							<td>A customizable character changer with a shell. (quite fun to use)</td>
+							<td><span class="no">No</span></td>	
+						</tr>
+					</table>
 				</p>
 			</div>
-		</div>
-		<div id="credits">
-			<span id="creditsleft">
-				<br>
-				(c) Martin/MegapolisPlayer, <span class="copyrightyear"></span><br>All rights reserved<br>Website version <span class="websiteversion"></span><br>
-			</span>
-			<span id="creditsright">
-				<br>
-				<a property="dct:title" rel="cc:attributionURL" href="https://megapolisplayer.github.io/">MartinWeb website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://megapolisplayer.github.io/contact">Martin/MegapolisPlayer</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0</a><br>
-				If you spot any bugs, please report them <a href="/bugreport.html">here.</a><br>
-			</span>
 		</div>
 	</body>
 </html>

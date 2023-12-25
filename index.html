@@ -12,88 +12,81 @@
 		<link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png">
 		<script src="/system/mainHandler.js"></script>
 	</head>
-	<body onload="InitWebpage()">
-		<div id="header" role="heading" aria-level="1">
-			<h id="headermaintext">MartinWeb</h>
-			<button onclick="window.location.href='/index.html'" disabled>
-				Homepage
-			</button>
-			<span class="headerdrop" id="productdropdown" role="button">
-				<button>
-					Products
-					<img class="headerimage" src="/assets/icons/dropdownB.png">
-				</button>
-				<div class="headerdropc">
-					<button onclick="window.location.href='/products.html'" role="button">All</button>
-					<button onclick="window.location.href='/products/versaillesengine.html'" role="button">VersaillesEngine</button>
-					<button onclick="window.location.href='/onlineapps.html'" role="button">Online Apps</button>
-				</div>
-			</span>
-			<span class="headerdrop" id="contactdropdown" role="button">
-				<button>
-					Contact
-					<img class="headerimage" src="/assets/icons/dropdownB.png">
-				</button>
-				<div class="headerdropc">
-					<button onclick="window.location.href='/contact.html'" role="button">Get in touch</button>
-					<button onclick="window.location.href='/bugreport.html'" role="button">Bugs and issues</button>
-				</div>
-			</span> 
-			<span class="headerdrop" id="optionsdropdown" role="button">
-				<button>
-					Options
-					<img class="headerimage" src="/assets/icons/dropdownB.png">
-				</button>
-				<div class="headerdropc">
-					<button onclick="window.location.href='/legal.html'" role="button">Legal</button>
-					<button onclick="window.location.href='/cookies.html'" role="button">Cookies</button>
-					<button onclick="window.location.href='/about.html'" role="button">About</button>
-				</div>
-			</span>
-		</div>
-		<div id="bodywrapper">
+	<body onload="InitWebpage(true, '', ['changelog'])">
+		<div id="bodywrapper" role="article">
+			<div class="blogwarning">
+				<p>
+				During Spring 2024 this website will recieve major updates.<br>
+				This update will affect the Online Apps page and the backend (content and internal code).<br>
+				Please report any bugs or issues <a href="./bugreport.html">here.</a><br>
+				<i>Progress can be tracked on <a href="https://www.github.com/MegapolisPlayer/MegapolisPlayer.github.io/issues">GitHub.</a></i><br>
+				</p>
+			</div>
 			<div class="blogpost" role="article">
 				<h>Welcome!</h>
 				<p>
-				Welcome to my personal and newly redesigned website! Here you can see all of my achievements and (sometimes) failures.<br>
+				Welcome to my personal website! Here you can see all of my achievements and (sometimes) failures.<br>
 				</p>
 			</div>
 			<div class="blogpost" role="article">
 				<h>About me</h>
 				<p>
 				Hello! I'm a student who really likes to code (mostly in lower-level languages such as C/C++, I do know Python and JS well enough though) and I am just overall intrested in techonology and computers
-				- from the desktops you can build yourself to the computers used in data centers and public transit systems.
+				- from the desktops you can build yourself to the computers used in data centers and <i>public transit systems <b>(also trains)</b></i>.
 				</p>
 			</div>
-			<div class="blogpost" role="article">
-				<h>About the redesign</h>
-				<p>
-				I redesigned this website in Summer 2023 to a) not look like trash and b) so I can actually use it for marketing, devlogs and so on.<br>The key points of this redesign were:<br>
-				<ul>
-					<li>Refresh graphics to the modern standard</li>
-					<li>Better mobile UI</li>
-					<li>Easier navigation</li>
-					<li>JavaScript functions to easier change info, usage of cookies</li>
-					<li>A vastly improved bug reporting system</li>
-					<li>A more consistent color scheme</li>
-					<li>A page for Versailles, other products in the future</li>
-					<li>Better accessibility</li>
-					<li>Improve CI/CD system</li>
-				</ul>
-				All of the following was successfully implemented in approx. 5 days. Most of the website was rewritten from scratch however you can still see the remnants of the old website (for example the "sections").<br>
-				</p>
+			<div class="blogpostsectionmenu">
+				<h class="blogpostsectionmenutext">Section "Website Changelog"</h>
+				<button class="blogpostsectionmenubutton" onclick="ToggleSection('changelog')" data-sectionlink="changelog"></button>
 			</div>
-		</div>
-		<div id="credits">
-			<span id="creditsleft">
-				<br>
-				(c) Martin/MegapolisPlayer, <span class="copyrightyear"></span><br>All rights reserved<br>Website version <span class="websiteversion"></span><br>
-			</span>
-			<span id="creditsright">
-				<br>
-				<a property="dct:title" rel="cc:attributionURL" href="https://megapolisplayer.github.io/">MartinWeb website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://megapolisplayer.github.io/contact">Martin/MegapolisPlayer</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0</a><br>
-				If you spot any bugs, please report them <a href="/bugreport.html">here.</a><br>
-			</span>
-		</div>
+			<!-- section -->
+			<div class="blogpostsection" data-section="changelog">
+				<div class="blogpost" role="article" data-section="changelog">
+					<h>Christmas update (Changelog for 2023.3)</h>
+					<p>
+					Large update, mostly behind the scenes changes (but some to content as well)<br>
+					<ul>
+						<li><b>Added</b> automatic generation of credits and dropdowns</li>
+						<li><b>Added</b> grouping of sections</li>
+						<li><b>Added</b> more styles of warning</li>
+						<li><b>Updated</b> changelog for 2023.1, added missing 2023.2 changelog</li>
+						<li><b>Updated</b> products page</li>
+						<li><b>Updated</b> cookie banner, more transparency</li>
+						<li><b>Updated</b> credits footer</li>
+						<li><b>Updated</b> versioning format <i>(removed useless patch number)</i></li>
+						<li><b>Removed</b> unused and/or outdated product pages</li>
+					</ul>
+					This is a small update aimed mostly at removing old content.<br>
+					<b>I also wish You a Merry Christmas and a Happy New Year!</b><br>
+					</p>
+				</div>
+				<div class="blogpost" role="article" data-section="changelog">
+					<h>Fall update (Changelog for 2023.2)</h>
+					<p>
+					Just a minor patch for the Online Apps page.
+					<ul>
+						<li>Update Online Apps internal code</li>
+					</ul>
+					</p>
+				</div>
+				<div class="blogpost" role="article" data-section="changelog">
+					<h>Summer redesign (Changelog for 2023.1)</h>
+					<p>
+					I redesigned this website in Summer 2023 to a) not look like trash and b) so I can actually use it for marketing, devlogs and so on.<br>The key points of this redesign were:<br>
+					<ul>
+						<li>Refresh graphics to the modern standard</li>
+						<li>Better mobile UI</li>
+						<li>Easier navigation</li>
+						<li>JavaScript functions to easier change info, usage of cookies</li>
+						<li>A vastly improved bug reporting system</li>
+						<li>A more consistent color scheme</li>
+						<li>Better accessibility</li>
+						<li>Improve CI/CD system (in Github, no CMS yet)</li>
+					</ul>
+					All of the following was successfully implemented in approx. 5 days. Most of the website was rewritten from scratch however you can still see the remnants of the old website (for example the "sections").<br>
+					</p>
+				</div>
+			</div>
+		</div>	
 	</body>
 </html>
