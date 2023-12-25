@@ -8,7 +8,7 @@ let WebsiteVersion = "23.3.1";
 //YEAR.UPDATE.VERSION.PATCH
 //YEAR - the year when update released (usually, some exceptions but rare)
 //UPDATE - counting from 1 - update no.
-//PATCH - counting from 1 (beta versions 0) - patch no.
+//PATCH - counting from 0 (beta versions also 0) - patch no.
 //
 
 let WebsiteURL = new URL(window.location.href);
@@ -355,8 +355,8 @@ function InitWebpage(Credits = true, DirPrefix = "", SectionsToDisableArray = []
 		useragentinputfields[i].setAttribute("value", window.navigator.userAgent);
 	}
 
-	//init buttons
-	buttons = document.getElementsByTagName("button");
+	//init header buttons
+	buttons = document.querySelectorAll("#header button");
 	for(let i = 0; i < buttons.length; i++) {
 		buttons[i].setAttribute("ontouchend", buttons[i].getAttribute("onclick"));
 	}
