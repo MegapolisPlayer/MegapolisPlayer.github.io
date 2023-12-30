@@ -9,6 +9,13 @@ OnlineApps.push({
 	OnClick: "window.location.href='/game/escape'",
 });
 
+OnlineApps.push({
+	Name: "CNyIES",
+	Description: "Christmas and New Year Information and Entertainment System - shows music, countdown to the New Year and some other things",
+	Disabled: false,
+	OnClick: "window.location.href='/apps/cnyies'",
+});
+
 //Functions
 
 function GenerateOnlineApps() {
