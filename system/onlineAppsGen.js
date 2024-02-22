@@ -3,10 +3,17 @@
 let OnlineApps = new Array();
 
 OnlineApps.push({
-	Name: "Escape from the Olomouc Region",
-	Description: "A game about escaping the Olomouc Region due to a Slovak rebellion. Includes minigames, achievements and support for multiple languages.",
+	Name: "Escape from the Olomouc Region (1.00, old)",
+	Description: "Original school version of the game. Not maintained.",
 	Disabled: false,
 	OnClick: "window.location.href='/game/escape_old'",
+});
+
+OnlineApps.push({
+	Name: "Escape from the Olomouc Region",
+	Description: "A game about escaping the Olomouc Region due to a Slovak rebellion. Includes minigames, achievements and support for multiple languages.",
+	Disabled: true,
+	OnClick: "window.location.href='/game/escape'",
 });
 
 OnlineApps.push({
