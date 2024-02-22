@@ -5,5 +5,5 @@
 	path = apps/cnyies
 	url = https://github.com/MegapolisPlayer/CNyIES.git
 [submodule "EscapeFromOlomoucRegion"]
-	path = EscapeFromOlomoucRegion
+	path = game/escape
 	url = https://github.com/MegapolisPlayer/EscapeFromOlomoucRegion.git
