@@ -1,6 +1,9 @@
-[submodule "game/escape"]
+[submodule "game/escape_old"]
 	path = game/escape_old
 	url = https://github.com/MegapolisPlayer/EscapeGameJS.git
 [submodule "apps/cnyies"]
 	path = apps/cnyies
 	url = https://github.com/MegapolisPlayer/CNyIES.git
+[submodule "game/escape"]
+	path = game/escape
+	url = https://github.com/MegapolisPlayer/EscapeFromOlomoucRegion.git
