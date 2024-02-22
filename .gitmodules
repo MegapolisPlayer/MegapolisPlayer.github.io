@@ -4,3 +4,6 @@
 [submodule "apps/cnyies"]
 	path = apps/cnyies
 	url = https://github.com/MegapolisPlayer/CNyIES.git
+[submodule "EscapeFromOlomoucRegion"]
+	path = EscapeFromOlomoucRegion
+	url = https://github.com/MegapolisPlayer/EscapeFromOlomoucRegion.git
