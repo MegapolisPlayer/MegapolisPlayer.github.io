@@ -3,8 +3,8 @@
 let OnlineApps = new Array();
 
 OnlineApps.push({
-	Name: "Escape from the Olomouc Region (1.00, old)",
-	Description: "Original school version of the game. Not maintained.",
+	Name: "Escape from the Olomouc Region (old)",
+	Description: "Original school version (1.00) of the game. Not maintained.",
 	Disabled: false,
 	OnClick: "window.location.href='/game/escape_old'",
 });
