@@ -12,7 +12,7 @@ OnlineApps.push({
 OnlineApps.push({
 	Name: "Escape from the Olomouc Region",
 	Description: "A game about escaping the Olomouc Region due to a Slovak rebellion. Includes minigames, achievements and support for multiple languages.",
-	Disabled: true,
+	Disabled: false,
 	OnClick: "window.location.href='/game/escape'",
 });
 
