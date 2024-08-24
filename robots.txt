@@ -1,0 +1,36 @@
+# Robots.txt file
+# for megapolisplayer.github.io (or the domain this is hosted on maybe)
+
+# our own crawler (he good)
+User-agent: NiepodleglaWyszukiwarka
+Disallow: /404.html
+Crawl-delay: 0
+
+# block most large AI bots
+# https://www.cyberciti.biz/web-developer/block-openai-bard-bing-ai-crawler-bots-using-robots-txt-file/
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+‍User-agent: Claude-Web
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+
+# other bots are free to crawl
+User-Agent: *
+Disallow: /bugreport.html
+Disallow: /legal.html
+Disallow: /cookies.html
+Disallow: /404.html
+Crawl-delay: 5
+
+Sitemap: https://megapolisplayer.github.io/system/sitemap.xml
