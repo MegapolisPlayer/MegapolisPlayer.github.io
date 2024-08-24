@@ -3,7 +3,7 @@
 
 # our own crawler (he good)
 User-agent: NiepodleglaWyszukiwarka
-Disallow: /404.html
+Disallow: /404
 Crawl-delay: 0
 
 # block most large AI bots
@@ -27,10 +27,10 @@ Disallow: /
 
 # other bots are free to crawl
 User-Agent: *
-Disallow: /bugreport.html
-Disallow: /legal.html
-Disallow: /cookies.html
-Disallow: /404.html
+Disallow: /bugreport
+Disallow: /legal
+Disallow: /cookies
+Disallow: /404
 Crawl-delay: 5
 
 Sitemap: https://megapolisplayer.github.io/system/sitemap.xml
