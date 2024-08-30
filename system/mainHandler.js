@@ -1,8 +1,8 @@
 //Variables
 
 //YEAR.UPDATE.VERSION.PATCH
-let WebsiteVersion = "24.1";
-//YEAR 24 UPDATE 1 PATCH 0
+let WebsiteVersion = "24.1.1";
+//YEAR 24 UPDATE 1 PATCH 1
 //
 //SYSTEMATIC VERSIONING
 //YEAR.UPDATE.VERSION.PATCH
