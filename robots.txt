@@ -33,4 +33,4 @@ Disallow: /cookies
 Disallow: /404
 Crawl-delay: 5
 
-Sitemap: https://megapolisplayer.github.io/system/sitemap.xml
+Sitemap: https://megapolisplayer.github.io/sitemap.xml
