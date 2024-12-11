@@ -23,6 +23,13 @@ OnlineApps.push({
 	OnClick: "window.location.href='/apps/cnyies'",
 });
 
+OnlineApps.push({
+	Name: "Railpexeso",
+	Description: "Pexeso, with trains!",
+	Disabled: false,
+	OnClick: "window.location.href='/game/railpexeso'",
+});
+
 //Functions
 
 function GenerateOnlineApps() {
