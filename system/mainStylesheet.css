@@ -1,5 +1,4 @@
 /*Main website stylesheet*/
-/*Colors: #00007d and #ffffff as main*/
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700');
 
@@ -7,14 +6,20 @@ html {
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
+
+	--main-color: #00007d;
+	--second-color: #ffffff;
+	--ok-color: #008000;
+	--warn-color: #cc6600;
+	--error-color: #800000;
 }
 
 body {
-	background-color: #00007d;
+	background-color: var(--main-color);
 	background-attachment: fixed;
 	font-family: 'Open Sans', sans-serif;
 	font-size: clamp(10px, 1.5vw, 20px);
-	color: #ffffff;
+	color: var(--second-color);
 	max-width: 100%;
 	height: 100%;
 	min-height: 100%;
@@ -39,8 +44,8 @@ body {
 }
 
 *::selection {
-	color: #00007d;
-	background-color: #ffffff;
+	color: var(--main-color);
+	background-color: var(--second-color);
 }
 
 /*Tags*/
@@ -49,7 +54,7 @@ a {
 	text-decoration: none;
 }
 a:link {
-	color: #00007d;
+	color: var(--main-color);
 }
 a:visited {
 	color: #7d007d;
@@ -74,7 +79,7 @@ a:active {
 	color: #20aaaa !important;
 }
 #credits a:active {
-	color: #dddddd !important;
+	color: var(--second-color) !important;
 }
 
 button {
@@ -83,25 +88,26 @@ button {
 	font-size: clamp(10px, 1.5vw, 20px);
 	font-weight: bold;
 	text-align: center;
-	background-color: #ffffff;
-	color: #00007d;
+	background-color: var(--second-color);
+	color: var(--main-color);
 	padding: 10px;
 	margin: 0;
 	border: none;
+	border-radius: 5px;
 }
 
 button:hover {
-	background-color: #00007d;
-	color: #ffffff;
+	background-color: var(--main-color);
+	color: var(--second-color);
 }
 button:active {
 	filter: brightness(80%);
-	background-color: #00007d;
-	color: #dddddd;
+	background-color: var(--main-color);
+	color: var(--second-color);
 }
 button:disabled {
-	background-color: #00007d;
-	color: #ffffff;
+	background-color: var(--main-color);
+	color: var(--second-color);
 }
 
 textarea {
@@ -120,8 +126,8 @@ select {
 	display: inline;
 	font-weight: bold;
 	text-align: center;
-	background-color: #ffffff;
-	color: #00007d;
+	background-color: var(--second-color);
+	color: var(--main-color);
 	padding: 10px;
 	margin: 0;
 	border: none;
@@ -137,8 +143,8 @@ select {
 	font-size: clamp(10px, 1.5vw, 20px);
 	font-weight: bold;
 	text-align: center;
-	background-color: #ffffff;
-	color: #00007d;
+	background-color: var(--second-color);
+	color: var(--main-color);
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-top: 10px;
@@ -147,13 +153,13 @@ select {
 	border: none;
 }
 
-h {
-	font-weight: bold;
-	font-size: clamp(15px, 2vw, 35px);
-}
-h2 {
+h1, h2, h3, h4, h5, h6 {
+	display: inline;
 	font-weight: bold;
 	margin: 0;
+}
+h1 {
+	font-size: clamp(15px, 2vw, 35px);
 }
 
 ul {
@@ -164,9 +170,13 @@ li ul {
 }
 
 table, tr, td, th {
-	border: 1px solid #ffffff;
+	border: 1px solid var(--second-color);
 	padding: 5px;
 	border-collapse: collapse;
+}
+
+hr {
+	color: var(--second-color);
 }
 
 .fullwidth {
@@ -179,8 +189,8 @@ table, tr, td, th {
 	position: sticky;
 	font-weight: bold;
 	font-size: clamp(20px, 2vw, 30px);
-	background-color: #ffffff;
-	color: #00007d;
+	background-color: var(--second-color);
+	color: var(--main-color);
 	width: 100%;
 	text-align: left;
 	padding: 10px;
@@ -197,8 +207,8 @@ table, tr, td, th {
 	}
 }
 #header *::selection {
-	color: #ffffff;
-	background-color: #00007d;
+	color: var(--second-color);
+	background-color: var(--main-color);
 }
 
 .headerimage {
@@ -217,8 +227,8 @@ table, tr, td, th {
 .headerdropc {
 	display: none;
 	position: absolute;
-	background-color: #dddddd;
-	color: #00007d;
+	background-color: var(--second-color);
+	color: var(--main-color);
 	font-size: clamp(10px, 1.5vw, 20px);
 	font-weight: bold;
 	text-align: center;
@@ -227,23 +237,23 @@ table, tr, td, th {
 	font-size: clamp(10px, 1.5vw, 20px);
 	font-weight: bold;
 	text-align: center;
-	background-color: #ffffff;
-	color: #00007d;
+	background-color: var(--second-color);
+	color: var(--main-color);
 	width: 100%;
 }
 .headerdropc button:hover {
-	background-color: #00007d;
-	color: #ffffff;
+	background-color: var(--main-color);
+	color: var(--second-color);
 }
 .headerdropc button:active {
 	filter: brightness(80%);
 	/*for mobile*/
-	background-color: #00007d;
-	color: #dddddd;
+	background-color: var(--main-color);
+	color: var(--second-color);;
 }
 .headerdropc button:disabled {
-	background-color: #00007d;
-	color: #ffffff;
+	background-color: var(--main-color);
+	color: var(--second-color);
 }
 
 /*Grid selection*/
@@ -257,11 +267,12 @@ table, tr, td, th {
 }
 .gridmember {
 	display: grid;
-	background-color: #ffffff;
-	color: #00007d;
+	background-color: var(--second-color);
+	color: var(--main-color);
 	border: none;
 	min-height: 30vh;
 	padding: 10px;
+	border-radius: 5px;
 }
 .gridmemberbutton {
 	bottom: 0;
@@ -276,38 +287,45 @@ table, tr, td, th {
 
 .blogpost {
 	background-color: #808080;
-	height: 5%;
-	border: 5px solid #ffffff;
+	min-height: 5%;
+	border: 5px solid var(--second-color);
 	padding: clamp(10px, 1.25vw, 30px); /*for text*/
 	margin-left: 5%;
 	margin-right: 5%; 
 	margin-top: 2%;
+	border-radius: 5px;
 }
 
 /*Selection*/
 
 .blogpostsectionmenu {
-	background-color: #ffffff;
-	color: #00007d;
-	border: 5px solid #ffffff;
+	background-color: var(--second-color);
+	color: var(--main-color);
+	border: 5px solid var(--second-color);
 	padding: clamp(10px, 10px, 30px);
 	margin-left: 5%;
 	margin-right: 5%; 
 	margin-top: 2%;
 	display: flex;
 	align-items: center;
+	border-radius: 5px;
+}
+.blogpostsectionmenu *::selection {
+	color: var(--second-color);
+	background-color: var(--main-color);
 }
 
 .blogpostsectionmenu button {
-	background-color: #ffffff;
-	color: #00007d;
+	background-color: var(--second-color);
+	color: var(--main-color);
 	padding: 5px;
 	display: inline-block;
 	right: 0;
+	margin-left: 1em;
 }
 .blogpostsectionmenu button:hover {
-	background-color: #00007d;
-	color: #ffffff;
+	background-color: var(--main-color);
+	color: var(--second-color);
 }
 
 @media only screen and (max-width: 499px) {
@@ -319,46 +337,51 @@ table, tr, td, th {
 /*Blogposts*/
 
 .bloginfo {
-	background-color: #008000;
-	color: #ffffff;
+	background-color: var(--ok-color);
+	color: var(--second-color);
 	border-left: clamp(10px, 0.5vw, 20px) solid #00aa00;
-	height: 5%;
-	padding: clamp(10px, 1.25vw, 30px); /*for text*/
-	margin-left: 5%;
-	margin-right: 5%; 
-	margin-top: 2%;
 	display: flex;
 }
 
 .blogwarning {
-	background-color: #cc6600;
-	color: #ffffff;
+	background-color: var(--warn-color);
+	color: var(--second-color);
 	border-left: clamp(10px, 0.5vw, 20px) solid #ff9900;
-	height: 5%;
-	padding: clamp(10px, 1.25vw, 30px); /*for text*/
-	margin-left: 5%;
-	margin-right: 5%; 
-	margin-top: 2%;
 	display: flex;
 }
 
 .blogerror {
-	background-color: #800000;
-	color: #ffffff;
+	background-color: var(--error-color);
+	color: var(--second-color);
 	border-left: clamp(10px, 0.5vw, 20px) solid #aa0000;
-	height: 5%;
-	padding: clamp(10px, 1.25vw, 30px); /*for text*/
-	margin-left: 5%;
-	margin-right: 5%; 
-	margin-top: 2%;
 	display: flex;
+}
+
+/*New apps blogpost*/
+
+.blognewapps {
+	background-color: var(--second-color);
+	color: var(--main-color);
+}
+.blognewapps *::selection {
+	color: var(--second-color);
+	background-color: var(--main-color);
+}
+
+.blognewapps hr {
+	color: var(--main-color);
+}
+
+.blognewapps button {
+	background-color: var(--main-color);
+	color: var(--second-color);
 }
 
 /*Inside blogpost*/
 
 .info {
-	background-color: #008000;
-	color: #ffffff;
+	background-color: var(--ok-color);
+	color: var(--second-color);
 	border-left: clamp(10px, 0.5vw, 20px) solid #00aa00;
 	width: fit-content;
 	height: fit-content;
@@ -369,11 +392,12 @@ table, tr, td, th {
 	margin-left: 10px;
 	margin-right: 10px;
 	display: flex;
+	border-radius: 5px;
 }
 
 .warning {
-	background-color: #cc6600;
-	color: #ffffff;
+	background-color: var(--warn-color);
+	color: var(--second-color);
 	border-left: clamp(10px, 0.5vw, 20px) solid #ff9900;
 	width: fit-content;
 	height: fit-content;
@@ -384,11 +408,12 @@ table, tr, td, th {
 	margin-left: 10px;
 	margin-right: 10px;
 	display: flex;
+	border-radius: 5px;
 }
 
 .error {
-	background-color: #800000;
-	color: #ffffff;
+	background-color: var(--error-color);
+	color: var(--second-color);
 	border-left: clamp(10px, 0.5vw, 20px) solid #aa0000;
 	width: fit-content;
 	height: fit-content;
@@ -399,6 +424,7 @@ table, tr, td, th {
 	margin-left: 10px;
 	margin-right: 10px;
 	display: flex;
+	border-radius: 5px;
 }
 
 .column2 {
@@ -420,7 +446,7 @@ table, tr, td, th {
 }
 
 .yes {
-	color: #008000;
+	color: var(--ok-color);
 	font-weight: bold;
 }
 .maybe {
@@ -428,11 +454,11 @@ table, tr, td, th {
 	font-weight: bold;
 }
 .notreally {
-	color: #cc6600; /*warning in bp color*/
+	color: var(--warn-color); /*warning in bp color*/
 	font-weight: bold;
 }
 .no {
-	color: #800000;
+	color: var(--error-color);
 	font-weight: bold;
 }
 

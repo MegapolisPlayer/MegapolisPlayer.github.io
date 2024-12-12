@@ -10,75 +10,91 @@
 		<title>MartinWeb | Homepage</title>
 		<link rel="stylesheet" href="/system/mainStylesheet.css">
 		<link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png">
-		<script src="/system/mainHandler.js"></script>
 	</head>
-	<body onload="InitWebpage(true, '', ['changelog'])">
+	<body onload="BodyOnLoad()">
 		<div id="bodywrapper" role="article">
+			<div class="blogpost blognewapps" role="article">
+				<h1>Featured apps</h1>
+				<em>More apps are accessible on the Apps/Online page.</em>
+				<br>
+				<span id="newapps"></span>
+			</div>
 			<div class="blogpost" role="article">
-				<h>Welcome!</h>
+				<h1>Welcome!</h1>
 				<p>
 				Welcome to my personal website! Here you can see all of my achievements and (sometimes) failures.<br>
 				</p>
 			</div>
 			<div class="blogpost" role="article">
-				<h>About me</h>
+				<h1>About me</h1>
 				<p>
 				Hello! I'm just a European guy interested in coding (C, C++, Python and JS) and public transit.<br>
 				</p>
 			</div>
 			<div class="blogpostsectionmenu">
-				<h class="blogpostsectionmenutext">Section "Website Changelog"</h>
+				<h1 class="blogpostsectionmenutext">Section "Website Changelog"</h1>
 				<button class="blogpostsectionmenubutton" onclick="ToggleSection('changelog')" data-sectionlink="changelog"></button>
 			</div>
 			<!-- section -->
 			<div class="blogpostsection" data-section="changelog">
-			<div class="blogpost" role="article" data-section="changelog">
-					<h>Summer 2024 update patch (Changelog for 2024.1.1)</h>
+				<div class="blogpost" role="article" data-section="changelog">
+					<h1>Winter 2024 update (Changelog for 2024.2)</h1>
 					<p>
 					<ul>
-						<li><b>Moved</b> sitemap</li>
-						<li><b>Disabled</b> unfinished online apps</li>
-						<li><b>Updated</b> product page</li>
+						<li><strong>Updated</strong> style of pages</li>
+						<li><strong>Updated</strong> internal code</li>
+						<li><strong>Added</strong> featured apps window</li>
+						<li><strong>Renamed</strong> some header entries</li>
 					</ul>
 					</p>
 				</div>
 				<div class="blogpost" role="article" data-section="changelog">
-					<h>Summer 2024 update (Changelog for 2024.1)</h>
+					<h1>Summer 2024 update patch (Changelog for 2024.1.1)</h1>
 					<p>
 					<ul>
-						<li><b>Updated</b> content</li>
-						<li><b>Added</b> robots.txt and sitemap (for crawling support)</li>
+						<li><strong>Moved</strong> sitemap</li>
+						<li><strong>Disabled</strong> unfinished online apps</li>
+						<li><strong>Updated</strong> product page</li>
 					</ul>
 					</p>
 				</div>
 				<div class="blogpost" role="article" data-section="changelog">
-					<h>Christmas update patch 1 (Changelog for 2023.3.1)</h>
+					<h1>Summer 2024 update (Changelog for 2024.1)</h1>
 					<p>
 					<ul>
-						<li><b>Fixed</b> non-header buttons on mobile</li>
+						<li><strong>Updated</strong> content</li>
+						<li><strong>Added</strong> robots.txt and sitemap (for crawling support)</li>
 					</ul>
 					</p>
 				</div>
 				<div class="blogpost" role="article" data-section="changelog">
-					<h>Christmas update (Changelog for 2023.3.0)</h>
+					<h1>Christmas update patch 1 (Changelog for 2023.3.1)</h1>
+					<p>
+					<ul>
+						<li><strong>Fixed</strong> non-header buttons on mobile</li>
+					</ul>
+					</p>
+				</div>
+				<div class="blogpost" role="article" data-section="changelog">
+					<h1>Christmas update (Changelog for 2023.3.0)</h1>
 					<p>
 					Large update, mostly behind the scenes changes (but some to content as well)<br>
 					<ul>
-						<li><b>Added</b> automatic generation of credits and dropdowns</li>
-						<li><b>Added</b> grouping of sections</li>
-						<li><b>Added</b> more styles of warning</li>
-						<li><b>Updated</b> changelog for 2023.1, added missing 2023.2 changelog</li>
-						<li><b>Updated</b> products page</li>
-						<li><b>Updated</b> cookie banner, more transparency</li>
-						<li><b>Updated</b> credits footer</li>
-						<li><b>Updated</b> versioning format <i>(removed useless patch number)</i></li>
-						<li><b>Removed</b> unused and/or outdated product pages</li>
+						<li><strong>Added</strong> automatic generation of credits and dropdowns</li>
+						<li><strong>Added</strong> grouping of sections</li>
+						<li><strong>Added</strong> more styles of warning</li>
+						<li><strong>Updated</strong> changelog for 2023.1, added missing 2023.2 changelog</li>
+						<li><strong>Updated</strong> products page</li>
+						<li><strong>Updated</strong> cookie banner, more transparency</li>
+						<li><strong>Updated</strong> credits footer</li>
+						<li><strong>Updated</strong> versioning format <em>(removed useless patch number)</em></li>
+						<li><strong>Removed</strong> unused and/or outdated product pages</li>
 					</ul>
-					<b>I wish You a Merry Christmas and a Happy New Year!</b><br>
+					<strong>I wish You a Merry Christmas and a Happy New Year!</strong><br>
 					</p>
 				</div>
 				<div class="blogpost" role="article" data-section="changelog">
-					<h>Fall update (Changelog for 2023.2)</h>
+					<h1>Fall update (Changelog for 2023.2)</h1>
 					<p>
 					Just a minor patch for the Online Apps page.
 					<ul>
@@ -87,7 +103,7 @@
 					</p>
 				</div>
 				<div class="blogpost" role="article" data-section="changelog">
-					<h>Summer redesign (Changelog for 2023.1)</h>
+					<h1>Summer redesign (Changelog for 2023.1)</h1>
 					<p>
 					I redesigned this website in Summer 2023 to a) not look like trash and b) so I can actually use it for marketing, devlogs and so on.<br>The key points of this redesign were:<br>
 					<ul>
@@ -105,5 +121,13 @@
 				</div>
 			</div>
 		</div>	
+		<script src="/system/mainHandler.js"></script>
+		<script src="/system/onlineAppsGen.js"></script>
+		<script>
+			function BodyOnLoad() {
+				InitWebpage(true, '', ['changelog']);
+				GenerateFeaturedApps();
+			}
+		</script>
 	</body>
 </html>
