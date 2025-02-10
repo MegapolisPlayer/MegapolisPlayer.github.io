@@ -7,9 +7,9 @@
 [submodule "game/escape"]
 	path = game/escape
 	url = https://github.com/MegapolisPlayer/EscapeFromOlomoucRegion.git
-[submodule "game/railpexeso"]
-	path = game/railpexeso
-	url = git@github.com:MegapolisPlayer/Railpexeso.git
 [submodule "apps/polish"]
 	path = apps/polish
 	url = https://github.com/MegapolisPlayer/PolishPronunciationProgram.git
+[submodule "game/railpexeso"]
+	path = game/railpexeso
+	url = https://github.com/MegapolisPlayer/Railpexeso.git
