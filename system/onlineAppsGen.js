@@ -4,7 +4,7 @@ let OnlineApps = new Array();
 
 OnlineApps.push({
 	Name: "Escape from the Olomouc Region (old)",
-	Description: "Original school version (1.00) of the game. Not maintained.",
+	Description: "Original school version (1.00) of the game. No longer maintained.",
 	Disabled: false,
 	OnClick: "window.location.href='/game/escape_old'",
 });
@@ -25,6 +25,12 @@ OnlineApps.push({
 	Description: "Pexeso, with trains!",
 	Disabled: false,
 	OnClick: "window.location.href='/game/railpexeso'",
+});
+OnlineApps.push({
+	Name: "Polish Pronunciation Program",
+	Description: "Basic program for training pronunciation of nasal vowels ą and ę, among other things.",
+	Disabled: false,
+	OnClick: "window.location.href='/apps/polish'",
 });
 
 //ids of online apps which are featured

@@ -10,3 +10,6 @@
 [submodule "game/railpexeso"]
 	path = game/railpexeso
 	url = git@github.com:MegapolisPlayer/Railpexeso.git
+[submodule "apps/polish"]
+	path = apps/polish
+	url = git@github.com:MegapolisPlayer/PolishPronunciationProgram.git
