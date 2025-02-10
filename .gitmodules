@@ -10,3 +10,6 @@
 [submodule "game/escape_old"]
 	path = game/escape_old
 	url = https://github.com/MegapolisPlayer/EscapeGameJS.git
+[submodule "game/escape"]
+	path = game/escape
+	url = https://github.com/MegapolisPlayer/EscapeFromOlomoucRegion.git
