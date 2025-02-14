@@ -32,6 +32,12 @@ OnlineApps.push({
 	Disabled: false,
 	OnClick: "window.location.href='/apps/polish'",
 });
+OnlineApps.push({
+	Name: "Minesweeper",
+	Description: "A very simple minesweeper clone.",
+	Disabled: false,
+	OnClick: "window.location.href='/game/minesweeper'",
+});
 
 //ids of online apps which are featured
 //currently Railpexeso and CNyIES

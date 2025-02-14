@@ -13,3 +13,6 @@
 [submodule "game/escape"]
 	path = game/escape
 	url = https://github.com/MegapolisPlayer/EscapeFromOlomoucRegion.git
+[submodule "game/minesweeper"]
+	path = game/minesweeper
+	url = https://github.com/MegapolisPlayer/MinesweepGame.git
