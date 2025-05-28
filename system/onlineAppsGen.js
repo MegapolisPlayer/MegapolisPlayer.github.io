@@ -9,7 +9,7 @@ OnlineApps.push({
 	OnClick: "window.location.href='/game/escape_old'",
 });
 OnlineApps.push({
-	Name: "Escape from the Olomouc Region - new minigams",
+	Name: "Escape from the Olomouc Region - new minigames",
 	Description: "Extension to original game. 7 new and remade minigames.",
 	Disabled: false,
 	OnClick: "window.location.href='/game/escape'",
